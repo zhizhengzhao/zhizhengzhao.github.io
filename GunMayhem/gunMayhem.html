@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+    <title>GunMayhem Remake</title>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: -10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 24px;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            font-size: 20px;
+            text-align: left;
+            font-weight:normal;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 14px;
+            /* line-height: 1.5; */
+            margin-bottom: 15px;
+        }
+
+        .author {
+            font-size: 16px;
+            /* line-height: 1.5; */
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+            margin: 0 auto;
+            display: block;
+            border-radius: 10px; /* 或者其他你想要的圆角值 */
+        }
+
+
+        .small-image {
+            height: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px; /* 添加表格底部间距 */
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #e0e0e0;
+        }
+
+        .code-container {
+            background-color: #f5f5f5;
+            font-family: 'Consolas', monospace;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Perfect GunMayhem Remake</h1>
+    <h2>A 2D Shooting PVP Game Based on Cocos2d-x</h2>
+
+    <p class="author">Zhengte Cai (蔡政特), Haoquan Zhang (张皓泉), Qinxiao Quan (全秦霄), Weijie Li (李伟杰)<br>
+        South China University of Technology</p>
+
+    <a href="https://github.com/Randonee1/Advanced-Language-Programming" target="_blank">
+    <img src="github-mark.png" alt="GitHub Repo of GunMayhem Remake" class="small-image">
+    </a>
+
+
+
+    <br>
+
+    <img src="images/image-20231106202137990.png" alt="Description of another image">
+
+    <h3>
+        Abstract
+    </h3>
+    <p>This project is our course design of Advanced Language Programming (C++) in 2022. We completed the GunMayhem Remake only by our team members, covering all aspects, including source code, game atrwork, and music assets. You can check all code details and run the executable demo in the GitHub repo.</p>
+
+    <h3>
+        General Design
+    </h3>
+    <img src="images/general.png" alt="Description of another image">
+
+    <h3>
+        Functions
+    </h3>
+    <p>
+        <strong>1. Game Start Interface:</strong> Introduces a user-friendly game launch interface with BGM, volume control, pause/resume, and exit options.<br>
+
+        <strong>2. Room Management:</strong> Allows players to create/join rooms, including support for AI opponents.<br>
+        
+        <strong>3. Weapon System:</strong> Features a diverse arsenal, including a pistol, sniper rifle, machine gun, and a special explosive kit, each with unique effects.<br>
+        
+        <strong>4. Weapon Drop Mechanism:</strong> Enables players to acquire different weapons by picking up dropped treasure chests.<br>
+        
+        <strong>5. Control Mechanism:</strong> Offers intuitive keyboard and mouse controls for character movement, jumping, gun attacks, and explosive actions.<br>
+        
+        <strong>6. Infinite Life:</strong> Provides players with unlimited lives for a continuous gaming experience.<br>
+        
+        <strong>7. Special Effects:</strong> Enhances gameplay with captivating visual effects for attacks and explosions.<br>
+        
+        <strong>8. Timing System:</strong> Incorporates a timing mechanism for game events and actions.<br>
+        
+        <strong>9. Critical Strikes and Hit Display:</strong> Highlights critical strikes and displays hit information to enhance combat feedback.<br>
+        
+        <strong>10. Scoring and Leaderboards:</strong> Implements a scoring system with leaderboards to track and compare player performance.
+    </p>
+
+    <h3>
+        Runtime Environment
+    </h3>
+
+    <table>
+    <tbody>
+        <tr>
+            <td><strong>Environment</strong></td>
+            <td><strong>Version</strong></td>
+        </tr>
+        <tr>
+            <td>Visual Studio</td>
+            <td>Both VS2019 and VS2022 are available</td>
+        </tr>
+        <tr>
+            <td>Cocos-2dx</td>
+            <td>4.0</td>
+        </tr>
+        <tr>
+            <td>Windows</td>
+            <td>Windows 10, Windows 11</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <h3>
+        Key Feature Implementation
+    </h3>
+    <h4>
+        Cocos2d engine modification
+    </h4>
+    <p>
+        <strong>Engine pain point:</strong> The built-in action in the engine can only achieve a fixed trajectory, and the relative position of the object cannot be changed during the execution of the action (for example, if it needs to be flipped during the game, the corresponding action will not be flipped). The reason is that the logic of the animation movement of the original engine is to first record the initial state of the action object at the beginning of the action , and then calculate the required change amount (distance or angle) according to the action, and then update the state of the object (position) based on these two values. and angle), the problem is that the initial state and the change amount do not change during the execution of the action . During the action cycle , the object will change according to the planned route, and will not change according to the actual flip situation.
+    </p>
+
+    <p>
+        <strong>Modification scheme:</strong> When the action is updated, change the initial state and change amount of the object according to whether the object is flipped or not. Take MoveBy::create(float t,Vec2 x) as an example (t is the action period, x is the offset coordinate), the original engine first obtains the initial coordinate value of the object at the beginning of the action, and then at each update, Calculate the offset at this moment in the action cycle according to the total offset of the action, and finally update the position of the object. What needs to be modified is the initial coordinate value and offset in this action. According to the flipping of the action object, the initial coordinate value and corresponding offset of the action can be changed in real time.
+    </p>
+
+    <pre class="code-container">
+void MoveBy::update(float t)
+{
+    if (_target)
+    {
+        Vec2 currentPos = _target->getPosition();
+        Vec2 diff = currentPos - _previousPosition; // offset
+        _startPosition = _startPosition + diff;
+        Vec2 Delta = _positionDelta;
+        _target->isLeft() ? Delta.x = -_positionDelta.x : Delta.x = _positionDelta.x; // change the offset
+        Vec2 start = _startPosition; // initial position
+        _target->isLeft() ^ isLeft ? start.x = -_startPosition.x : start.x = _startPosition.x; // change the offset coordinates
+        Vec2 newPos = start + (Delta * t); // update position
+        _target->setPosition3D(newPos);
+        _previousPosition = newPos;
+    }
+}</pre>
+
+    <h4>
+        Moving between different floors
+    </h4>
+
+    <p>
+        The core logic for character movement across floors involves incrementing the floor when the character jumps, decrementing it when the character falls, and adjusting it when the character steps in the air. If the character falls outside the boundary, the floor is also decremented to determine the character's current floor.
+
+    </p>
+
+    <p>
+        However, if the character is descending without jumping up steps, additional checks are needed. If the character passes through a layer, the floor is decremented. In cases of "stepping on air" and "falling" with a double jump, the floor is decremented. After the double jump, the game checks if the character wears the upper layer floor; if so, it increments the floor.
+    </p>
+
+    <p>
+        The subsequent AI movement judgment relies on the character's floor value. To facilitate this, a floor_actual is introduced, updated only once after the character lands. This ensures that the character's floor is not immediately changed during jumps and falls, enhancing AI logic.
+    </p>
+
+    <img src="images/floor.gif" alt="Description of another image">
+
+    <h4>
+        Skills
+    </h4>
+
+    <img src="images/items.png" alt="Description of another image">
+
+    <p style="text-align: center;">
+        The icons of skills. From left to right, they are: Double Team, Extra Life, Jetpack, Shield, Speed Up, Super Jump, and Minimization.
+    </p>
+    
+
+    <h4>
+        Key Skills 1: SpeedUp
+    </h4>
+
+    <img src="images/speedup.png" alt="Description of another image">
+
+    <p>
+        In addition to speeding up the character's movement speed and acceleration, one of the highlights of this skill is the afterimage special effect. The specific method is to use a linked list structure to store each afterimage
+    </p>
+
+    <p>
+        Each of the afterimage stores position information and a corresponding image, and stores a pointer to a previous afterimage and a pointer to a next afterimage. First set the maximum number of afterimages and update time, and use “head” and “tail” to store the head and tail pointers of the afterimage list respectively. For each update, first draw the afterimage pointed by the “head” pointer to the canvas, then create a new pointer, and pass in the current position of the character and the corresponding image, and move the position of the “head” pointer. If the number of afterimages reaches the maximum value, the “tail” pointer needs to be released, and the corresponding afterimages will also be removed from the canvas, and finally the “tail” pointer will be moved forward.
+    </p>
+
+    <p>
+        One thing that needs special attention is that every time you create a pointer, you cannot directly pass in the pointer corresponding to the current character. First, the pointer will change, and the content of the afterimage will not be recorded. Second, the direct operation on the afterimage pointer will affect the character itself (if the pointer of the character itself is passed in), there will be various errors, so the method in the project is to define a clone() function in the CharacterBase class. This function is based on the real-time Status returns a new image.
+    </p>
+
+    <pre class="code-container">
+struct Shadow {
+    Sprite* figure;
+    Vec2 point;
+    Shadow* next;
+    Shadow* last;
+    
+    Shadow(Sprite* figure,Vec2 point, Shadow* last) {
+        this->figure = figure;
+        this->point = point;
+        this->last = last;
+        this->next = nullptr;
+    }
+};</pre>
+
+    <h4>
+        Key Skills 2: Jetpack
+    </h4>
+
+    <img src="images/jetpack.png" alt="Description of another image">
+
+    <p>
+        The basic logic of the jetpack is to change the longitudinal acceleration of the character in the update() function, so that the character can fly upwards by pressing the up button while jumping in the air, and at the same time create a jet particle animation during the leap to realize the character jet upward special effects.
+    </p>
+
+    <pre class="code-container">void Jetpack::update(float dt)
+{
+    SkillBase::update(dt);
+
+    if (player->getPositionY() > player->map->platform->getContentSize().height + 1000) flyable = false;
+    if (player->getPositionY() < player->map->platform->getContentSize().height + 500) flyable = true;
+
+    if (player->keyMap["up"] == true && player->inTheAir && player->isDoubleJump  && flyable) {
+        if (onAction)
+            player->MoveDelay(true, false);
+        onAction = false;
+        player->status->gravitation = anti_gravitation;
+        if (player->y_speed > player->status->y_maxSpeed/1.2)
+            player->y_speed -= player->status->gravitation * dt;
+
+        Emission();
+    }
+    else {
+        player->status->gravitation = gravitation;
+        onAction = true;
+    }
+
+    if (jetpack->isFlippedX() != player->isFlippedX()) {
+        jetpack->setFlippedX(player->isFlippedX());
+        jetpack->setPositionX(-jetpack->getPositionX());
+    }
+}</pre>
+
+    <h4>
+        Key Skills 3: DoubleTeam
+    </h4>
+
+    <img src="images/doubleteam.jpg" alt="Description of another image">
+
+    <p>
+        The basic logic of the split is when creating an AI in the constructor of the skill, and the initial position of the AI is created in the same position as the character, but after creating it, some parameters of the split have to be adjusted accordingly.
+    </p>
+
+    <pre class="code-container">
+DoubleTeam::DoubleTeam(CharacterBase* player)
+    {
+        skillTpye = DOUBLE_TEAM;
+        this->player = player;
+        duration = 0;
+        Duration = 10;
+        doppelganger = AI2::create(player->getTag(), player->map);
+        doppelganger->isDoppelganger = true;
+        doppelganger->firstLand = false;
+        doppelganger->playerName->setString("doppelganger");
+        doppelganger->Live = 1;
+        doppelganger->isDoubleJump = player->isDoubleJump;
+        doppelganger->inTheAir = player->inTheAir;
+        doppelganger->floor = player->floor;
+        doppelganger->floor_actual = player->floor_actual;
+        if (!doppelganger->skills.empty()) {
+            for (auto& skill : doppelganger->skills) {
+                delete skill;
+                skill = nullptr;
+            }
+            doppelganger->skills.clear();
+        }
+        doppelganger->Flip(player->isFlippedX());
+        doppelganger->GetOpponent(player->opponent);
+        doppelganger->setPosition(player->getPosition());
+        player->map->platform->addChild(doppelganger);
+    }</pre>
+
+
+
+
+</body>
+</html>
