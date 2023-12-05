@@ -47,6 +47,10 @@
             margin-bottom: 15px;
         }
 
+        .italic{
+            font-style: italic;
+        }
+
         .author {
             font-size: 16px;
             /* line-height: 1.5; */
@@ -57,7 +61,7 @@
             max-width: 100%;
             height: auto;
             cursor: pointer;
-            margin: 0 auto;
+            margin: auto;
             display: block;
             border-radius: 10px; /* 或者其他你想要的圆角值 */
         }
@@ -116,8 +120,10 @@
 
 
     <br>
-
-    <img src="images/image-20231106202137990.png" alt="Description of another image">
+    <img src="images/art.png" alt="Description of another image">
+    <p></p>
+    <img src="images/logo.png" alt="Description of another image">
+    
 
     <h3>
         Abstract
@@ -351,8 +357,47 @@ DoubleTeam::DoubleTeam(CharacterBase* player)
         player->map->platform->addChild(doppelganger);
     }</pre>
 
+    <h3>
+        UI Design & Implementation
+    </h3>
+    <h4>
+        Background Choise Menu
+    </h4>
 
+    <img src="images/1217_1.png">
 
+    <p>
+        This interface is primarily composed of buttons. The map selection section incorporates a sliding color block effect. However, the first issue with image buttons is that, upon clicking, they quickly revert to their original state. To address this, the callback function modifies the main state image. The second issue is that the two images are on the same layer. Therefore, when the selection is made, the orange color is positioned beneath the sliding color block, resulting in a suboptimal effect. To remedy this, layer changes are implemented in the click callback function.
+    </p>
+    <p>
+        The interface also features a text box for entering the desired quantity of lives.
+    </p>
+    <p>
+        All selection information on this interface is stored in the GameManager, preparing for subsequent gameplay.
+    </p>
+    
+
+    <h4>
+        Setting Menu
+    </h4>
+
+    <img src="images/1215_1.png">
+
+    <p>
+        Regarding the control of background music and sound effects: pre-load in the HelloWorld class, initialize background music in the StartScene class, and implement control over background music in the Setting class.
+    </p>
+    <p>
+        Issue: In the StartScene class, if initialized as follows, it will result in the background music restarting from the beginning each time StartScene is entered, leading to the accumulation of multiple layers of background music.
+    </p>
+
+    <td style="padding:0px">
+        <br>
+    <p style="text-align: center; font-style: italic; font-size:small;">
+        "Alone we can do so little; together we can do so much." - Helen Keller
+    </p>
+    </td>
+    
+    
 
 </body>
 </html>
