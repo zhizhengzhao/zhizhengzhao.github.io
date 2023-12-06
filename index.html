@@ -222,6 +222,42 @@
               </tr>
             </tbody></table>
 
+            
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr onmouseout="eeg_stop()" onmouseover="eeg_start()">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <img src='images/3dDetector.png' width="160">
+                    <script type="text/javascript">
+                      function eeg_start() {
+                        document.getElementById('difsurvey_image').style.opacity = "1";
+                      }
+              
+                      function eeg_stop() {
+                        document.getElementById('difsurvey_image').style.opacity = "0";
+                      }
+                      eeg_stop();
+                    </script>
+                  </div>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <!-- <a href="https://arxiv.org/abs/2310.07204"> -->
+                  <span class="papertitle">The Development of Grid-based 3D Object Detectors: A Comprehensive Survey</span><br>
+                  <strong><a href="data/Survey.pdf">[Paper PDF]</a></strong>
+                  <p></p>
+
+                  <em>Course Paper<em>, 2023, 3D Vision and Artificial Intelligence
+                  <!-- <br><em>课程设计<em>, 2021, 生物医学工程探索设计 -->
+                  <br>
+                  <p></p>
+                  <p>
+                    This paper centers around two backbone structures in visual processing, namely CNN and transformer, providing a detailed exposition of 3D point cloud detection methods based on these frameworks. Presented in chronological order, the paper narrates the developmental processes of these detectors and elucidates their respective unique innovations.
+                  </p>
+                  <p><strong>Final Score: 95, 4.0/4.0.</strong></p>
+                </td>
+              </tr>
+            </tbody></table>
+
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr onmouseout="gun_stop()" onmouseover="gun_start()">
                 <td style="padding:20px;width:25%;vertical-align:middle">
@@ -301,6 +337,7 @@
                 </td>
               </tr>
             </tbody></table>
+
 
 
           </tbody></table>
