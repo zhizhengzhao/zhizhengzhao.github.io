@@ -86,7 +86,6 @@ a {
 
 strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 16px;
 }
 
 h2 {
@@ -132,4 +131,34 @@ h2 {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+header {
+  background-color: #ffffff;
+  color: #d5d5d5;
+  text-align: center;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  /* z-index: 1000; */
+  /* margin: 0 auto; */
+}
+
+nav {
+  display: inline-block; /* 使nav元素水平排列 */
+}
+
+nav a {
+  color: #626262;
+  text-decoration: none;
+  /* margin: 0 10px; 调整链接之间的间距 */
+}
+
+nav a:hover {
+  color: #55a3d4;
+  text-decoration: none;
+}
+
+section {
+  padding-top: 0;
 }
