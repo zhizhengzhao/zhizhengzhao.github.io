@@ -64,17 +64,19 @@
 }
 
 a {
-  color: #4169E1;
+  color: #dd3d32;
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #38daff;
+  color: #ffa538;
   text-decoration: none;
 }
 
-body,
+body{
+  margin: 0;
+}
 td,
 th,
 tr,
@@ -133,32 +135,55 @@ span.highlight {
   background-color: #ffffd0;
 }
 
-header {
-  background-color: #ffffff;
-  color: #d5d5d5;
-  text-align: center;
-  padding: 1em;
-  position: fixed;
-  top: 0;
-  /* z-index: 1000; */
-  /* margin: 0 auto; */
-}
-
-nav {
-  display: inline-block; /* 使nav元素水平排列 */
-}
-
-nav a {
-  color: #626262;
-  text-decoration: none;
-  /* margin: 0 10px; 调整链接之间的间距 */
-}
-
-nav a:hover {
-  color: #55a3d4;
-  text-decoration: none;
-}
-
 section {
   padding-top: 0;
+}
+
+ul{
+  width: 100%;
+  position: fixed;
+  list-style: none;
+  background-color: #ffffff;
+  text-align:center;
+  /* position: inherit; */
+  padding-inline-start: 0%;
+  margin-block-start: 0%;
+  /* margin-block-end: 0%; */
+  z-index: 999;
+}
+
+ul li{
+  display: inline-block;
+  /* position:sticky; */
+}
+
+ul li a{
+  padding: 10px;
+  display: block;
+  color: #474747;
+}
+
+ul li a:hover{
+  color: #e05822;
+}
+
+@media (max-width: 1240px) {
+  .desktop-component {
+      display: none;
+  }
+
+  .mobile-component {
+      display: block;
+  }
+}
+
+/* 在屏幕宽度大于 1240px 时，显示电脑组件，隐藏手机组件 */
+@media (min-width: 769px) {
+  .desktop-component {
+      display: block;
+  }
+
+  .mobile-component {
+      display: none;
+  }
 }

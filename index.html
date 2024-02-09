@@ -2,15 +2,61 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
     <title>Haoquan Zhang</title>
-
-    <meta name="author" content="Jon Barron">
+    <meta name="author" content="HaoquanZhang">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/web_icon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+
   </head>
+
+  <body>
+    <div class="mobile-component">
+      <ul>
+        <li><a href="#Top"><strong>🔝</strong></a></li>
+        <li><a href="#ResearchExperience">🔬</a></li>
+        <li><a href="#EducationExperience">📚</a></li>
+        <li><a href="#Research">💡</a></li>
+        <li><a href="#Projects">📂</a></li>
+        <li><a href="#Awards">🏆</a></li>
+      </ul>
+    </div>
+
+    <div class="desktop-component">
+      <ul>
+        <li><a href="#Top" style="font-size: x-large;"><strong>🏮Haoquan Zhang🏮</strong></a></li>
+        <li><a href="#ResearchExperience">Research Experience</a></li>
+        <li><a href="#EducationExperience">Education Experience</a></li>
+        <li><a href="#Research">Research</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Awards">Awards</a></li>
+      </ul>
+    </div>
+
+    <script>
+      // 获取导航栏高度
+      var navbarHeightMobile = document.querySelector('.mobile-component ul').offsetHeight;
+      var navbarHeightDesktop = document.querySelector('.desktop-component ul').offsetHeight;
+    
+      // 监听导航链接点击事件
+      document.querySelectorAll('.mobile-component ul li a, .desktop-component ul li a').forEach(function(anchor) {
+          anchor.addEventListener('click', function(event) {
+              event.preventDefault(); // 阻止默认的导航行为
+    
+              var targetId = this.getAttribute('href'); // 获取目标部分的 ID
+              var targetElement = document.querySelector(targetId); // 获取目标部分的元素
+              var targetOffsetTop = targetElement.offsetTop; // 获取目标部分顶部相对于文档顶部的偏移量
+    
+              // 调整滚动位置，减去导航栏高度以防止遮挡
+              var navbarHeight = (window.innerWidth < 768) ? navbarHeightMobile : navbarHeightDesktop;
+              window.scrollTo({
+                  top: targetOffsetTop - navbarHeight,
+                  behavior: 'smooth' // 平滑滚动
+              });
+          });
+      });
+    </script>
+    
 
     <section style="padding-top:0;" id="Top"></section>
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -19,11 +65,11 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr style="padding:0px">
               <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: auto;">
+                <p class="name" style="text-align: auto;padding-top: 32px">
                   Haoquan Zhang 张皓泉
                 </p>
                 <p>
-                  Hello, my name is Haoquan Zhang, a junior student majoring in Data Science at South China University of Technology, with a GPA of 3.7/4.0. With a longing for AI technology, I transferred from Biomedical Engineering to Data Science in my freshman year. I followed <a href="https://www.researchgate.net/profile/Kai-Wu-12">Prof. Kai Wu</a> and <a href="https://scholar.google.com/citations?user=cC_WhWkAAAAJ">Prof. Huaidong Zhang</a> for two scientific research interns. My current research interest is the <strong>Vision Language Representation Learning</strong>. 
+                  Hi, my name is Haoquan Zhang, a junior student majoring in Data Science at South China University of Technology, with a GPA of 3.7/4.0. With a longing for AI technology, I transferred from Biomedical Engineering to Data Science in my freshman year. I followed <a href="https://www.researchgate.net/profile/Kai-Wu-12">Prof. Kai Wu</a> and <a href="https://scholar.google.com/citations?user=cC_WhWkAAAAJ">Prof. Huaidong Zhang</a> for two scientific research interns. My current research interest is the <strong>Vision Language Representation Learning</strong>. 
                 </p>
                 <p>
                   Besides scientific research and learning, my hobbies are mainly electronic music production and arrangement. Check the link of Bilibili below to listen to my tracks.
@@ -31,11 +77,11 @@
                 
                 
                 <p style="text-align:center">
-                  <a href="data/resume.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="https://space.bilibili.com/195413691">Bilibili </a>&nbsp;/&nbsp;
-                  <a href="https://www.zhihu.com/people/homybush">Zhihu </a>&nbsp;/&nbsp;
-                  <a href="https://github.com/HaoquanZhang">Github</a>&nbsp;/&nbsp;
-                  <a href="mailto:haoquanzhang@outlook.com">Email</a>
+                  <a href="data/resume.pdf">CV                            </a> &nbsp;·&nbsp;
+                  <a href="https://space.bilibili.com/195413691">Bilibili </a> &nbsp;·&nbsp;
+                  <a href="https://www.zhihu.com/people/homybush">Zhihu   </a> &nbsp;·&nbsp;
+                  <a href="https://github.com/HaoquanZhang">Github        </a> &nbsp;·&nbsp;
+                  <a href="mailto:haoquanzhang@outlook.com">Email         </a>
                   <!-- <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp; -->
                   <!-- <a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Scholar</a> &nbsp;/&nbsp; -->
                   <!-- <a href="https://www.threads.net/@jonbarron">Threads</a> &nbsp;/&nbsp;
@@ -45,7 +91,15 @@
                 </p>
               </td>
               <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/wc_icon.png"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/wc_icon.png" class="hoverZoomLink"></a>
+                <a >
+                  <img 
+                  style="width:100%;
+                  max-width:100%;
+                  object-fit: cover; 
+                  border-radius: 50%;" 
+                  alt="profile photo" 
+                  src="images/wc_icon.png" 
+                  class="hoverZoomLink"></a>
               </td>
             </tr>
           </tbody>
@@ -57,7 +111,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
           <td style="padding:20px;width:100%;vertical-align:middle">
-            <h2><strong>Research Experience</strong></h2>
+            <h2><strong>Research Experience 🔬</strong></h2>
           </td>
           </tr>
           </tbody>
@@ -113,7 +167,7 @@
             <tr>
               <td style="padding:20px;vertical-align:middle">
                 
-                <h2><strong>Education Experience</strong></h2>
+                <h2><strong>Education Experience 📚</strong></h2>
                 
                 <p><strong>South China University of Technology</strong> (<a href="https://www.scut.edu.cn/en/">SCUT</a>), Guangzhou, China. (2021 - present)</p>
                 <p><strong>B.Eng.</strong> Data Science & Big Data Technology</p>
@@ -183,7 +237,7 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <h2><strong>Research</strong></h2>
+              <h2><strong>Research 💡</strong></h2>
               <p>
                 I'm interested in <strong>Multi-Modality Representation Learning</strong> and <strong>Knowledge Distillation</strong>.
               </p>
@@ -219,10 +273,8 @@
               <td style="padding:20px;width:75%;vertical-align:middle">
                 <!-- <a href="https://arxiv.org/abs/2310.07204"> -->
                 <span class="papertitle">Mask4Align: Aligned Entity Prompting with Color Masks for Multi-Entity Localization Problems</span><br>
-                <strong>[Paper attached in email]</strong>
                 <strong><a href="https://www.zhihu.com/question/627841035/answer/3286130863">[Submission Journey]</a></strong>
                 <p></p>
-                <!-- </a> -->
                 <strong>Haoquan Zhang</strong>,
                 Ronggang Huang,
                 <a href="https://scholar.google.com/citations?user=6ed7vBAAAAAJ&hl">Yi Xie</a>,
@@ -244,11 +296,10 @@
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
             <tr>
               <td>
-                <h2><strong>Projects</strong></h2>
+                <h2><strong>Projects 📂</strong></h2>
               </td>
             </tr>
           </tbody></table>
-
 
           <table width="100%" align="center" border="0" cellpadding="20"><tbody>
             
@@ -285,7 +336,6 @@
                   <p></p>
 
                   <em>Entry<em>, 2023, National Biomedical Engineering lnnovation Design Competition for College Students
-                  <!-- <br><em>参赛作品<em>, 2023, 中国大学生生物医学工程创新设计大赛 -->
                   <br>
                   <p></p>
                   <p>
@@ -358,8 +408,9 @@
                 <td style="padding:20px;width:75%;vertical-align:middle">
                   <!-- <a href="https://arxiv.org/abs/2310.07204"> -->
                   <span class="papertitle">Perfect GunMayhem Remake: A 2D Shooting PVP Game Based on Cocos2d-x</span> <br>
-                  <strong><a href="https://github.com/Randonee1/Advanced-Language-Programming">[Github]</a></strong>, 
-                  <strong><a href="GunMayhem/gunMayhem.html">[Object Page]</a></strong>
+                  <strong><a href="https://github.com/Randonee1/Advanced-Language-Programming">[Github]</a></strong>&nbsp;&nbsp;
+                  <strong><a href="GunMayhem/gunMayhem.html">[Object Page]</a></strong>&nbsp;&nbsp;
+                  <strong><a href="https://gun-mayhem-2.github.io/">[Original Game]</a></strong>&nbsp;&nbsp;
                   <p></p>
                   <a href="https://github.com/Randonee1">Zhengte Cai</a>, 
                   <a href="https://github.com/JoyceQuan">Qinxiao Quan</a>, 
@@ -371,6 +422,9 @@
                   <p></p>
                   <p>
                     GunMayhem Remake is a project independently completed by our team members, covering all aspects, including source code, game atrwork, and music assets. You can play our compiled executable file directly on <a href="https://github.com/Randonee1/Advanced-Language-Programming">[Github]</a>.
+                  </p>
+                  <p>
+                    <span style="color: rgb(182, 48, 240);">Shoutout to <a href="https://www.thekevingu.com/">Kevin Gu</a> for creating this incredible game!</span>
                   </p>
                   <p><strong>Final Score: 99, 4.0/4.0. (1%)</strong></p>
                 </td>
@@ -416,7 +470,7 @@
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2><strong>Awards</strong></h2>
+                <h2><strong>Awards 🏆</strong></h2>
                 <p><strong>Meritorious Winner (7%)</strong>, 
                 <br>The Interdisciplinary Contest in Modeling (ICM), <a href="https://www.comap.com/">COMAP</a>, 2021</p>
                 <p><strong>Third Prize (12%)</strong>, 
