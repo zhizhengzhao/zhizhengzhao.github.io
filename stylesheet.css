@@ -160,11 +160,13 @@ ul li{
 ul li a{
   padding: 10px;
   display: block;
-  color: #474747;
+  color: #db4747;
+  
 }
 
 ul li a:hover{
-  color: #e05822;
+  color: #ff9900;
+  /* font-size: 17px; */
 }
 
 @media (max-width: 1240px) {
