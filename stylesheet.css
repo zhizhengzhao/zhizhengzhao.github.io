@@ -64,13 +64,13 @@
 }
 
 a {
-  color: #dd3d32;
+  color: #2d6bc7;
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #ffa538;
+  color: #29d4fa;
   text-decoration: none;
 }
 
@@ -160,12 +160,12 @@ ul li{
 ul li a{
   padding: 10px;
   display: block;
-  color: #db4747;
+  color: #616161;
   
 }
 
 ul li a:hover{
-  color: #ff9900;
+  color: #8daad9;
   /* font-size: 17px; */
 }
 
