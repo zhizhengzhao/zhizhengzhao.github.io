@@ -70,7 +70,7 @@ a {
 
 a:focus,
 a:hover {
-  color: #29d4fa;
+  color: #00bce6;
   text-decoration: none;
 }
 
@@ -165,7 +165,7 @@ ul li a{
 }
 
 ul li a:hover{
-  color: #8daad9;
+  color: #6493df;
   /* font-size: 17px; */
 }
 
