@@ -207,3 +207,7 @@ ul li a:hover{
   object-fit: auto; 
   object-position: center;
 }
+
+.item p {
+  margin: 16px 0;
+}
