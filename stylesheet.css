@@ -202,6 +202,14 @@ ul li a:hover{
   text-align: center;
 }
 
+@media screen and (max-width: 769px){
+  .item {
+    width: 30%;
+    margin: 0.5%;
+    text-align: center;
+  }
+}
+
 .item img {
   width: 100%; 
   object-fit: auto; 
@@ -210,4 +218,12 @@ ul li a:hover{
 
 .item p {
   margin: 16px 0;
+}
+
+.conference {
+  background-color: #397bc3; /* 设置背景颜色 */
+  border-radius: 4px; /* 设置圆角 */
+  padding: 4px; /* 设置内边距 */
+  display: inline-block; /* 设置为内联块元素，使其符合其内容的宽度 */
+  color: #ffffff;
 }
