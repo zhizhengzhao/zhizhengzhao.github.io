@@ -227,3 +227,16 @@ ul li a:hover{
   display: inline-block; 
   color: #ffffff;
 }
+
+.interest {
+  background-color: #ffffff; 
+  border-radius: 4px; 
+  padding: 8px; 
+  display: inline-block; 
+  color: #464646;
+}
+
+.interest:hover{
+  background-color: #dedede; 
+  color: #000000;
+}
