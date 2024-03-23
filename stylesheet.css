@@ -145,10 +145,8 @@ ul{
   list-style: none;
   background-color: #ffffff;
   text-align:center;
-  /* position: inherit; */
   padding-inline-start: 0%;
   margin-block-start: 0%;
-  /* margin-block-end: 0%; */
   z-index: 999;
 }
 
@@ -194,18 +192,19 @@ ul li a:hover{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .item {
   width: 15%;
-  margin: 0.5%;
+  margin: 0.83%;
   text-align: center;
 }
 
 @media screen and (max-width: 769px){
   .item {
-    width: 30%;
-    margin: 0.5%;
+    width: 23%;
+    margin: 1%;
     text-align: center;
   }
 }
