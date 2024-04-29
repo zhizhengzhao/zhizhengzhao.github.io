@@ -211,6 +211,7 @@ ul li a:hover{
 
 .item img {
   width: 100%; 
+  max-width: 120px;
   object-fit: auto; 
   object-position: center;
 }

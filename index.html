@@ -35,35 +35,37 @@
       </ul>
     </div>
 
+    
     <script>
-      // 获取导航栏高度
+      // Get the height of the mobile and desktop navigation bars
       var navbarHeightMobile = document.querySelector('.mobile-component ul').offsetHeight;
       var navbarHeightDesktop = document.querySelector('.desktop-component ul').offsetHeight;
-    
-      // 监听导航链接点击事件
+  
+      // Add click event listeners to navigation links
       document.querySelectorAll('.mobile-component ul li a, .desktop-component ul li a').forEach(function(anchor) {
           anchor.addEventListener('click', function(event) {
-              event.preventDefault(); // 阻止默认的导航行为
-    
-              var targetId = this.getAttribute('href'); // 获取目标部分的 ID
-              var targetElement = document.querySelector(targetId); // 获取目标部分的元素
-              var targetOffsetTop = targetElement.offsetTop; // 获取目标部分顶部相对于文档顶部的偏移量
-    
-              // 调整滚动位置，减去导航栏高度以防止遮挡
+              event.preventDefault(); // Prevent the default navigation behavior
+  
+              var targetId = this.getAttribute('href'); // Get the target section's ID from the link's href
+              var targetElement = document.querySelector(targetId); // Find the target element using its ID
+              var targetOffsetTop = targetElement.offsetTop; // Get the target's top offset relative to the document
+  
+              // Calculate scroll position considering the navigation bar height to avoid overlap
               var navbarHeight = (window.innerWidth < 768) ? navbarHeightMobile : navbarHeightDesktop;
               window.scrollTo({
                   top: targetOffsetTop - navbarHeight,
-                  behavior:"smooth" // 平滑滚动
+                  behavior: 'smooth' // Smooth scroll to the target position
               });
           });
       });
     </script>
+  
 
 
     
 
     
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <table style="max-width:900px;margin:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px"> 
 
@@ -79,9 +81,10 @@
 
           
           <section style="padding-top:0;" id="Top"></section>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;padding-top: 5%;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
+          <table style="max-width:900px;margin:auto;padding-top: 5%;">
+            <tbody>
+              <tr style="padding:0px">
+                <td style="padding:2.5%;width:70%;vertical-align:middle">
                 
                 <p class="name" style="text-align: auto;">
                   Haoquan Zhang 张皓泉
@@ -93,10 +96,6 @@
                   <br>
                   <strong style="color: rgb(249, 32, 166);">I’m currently seeking a PhD position for fall 2025 admission.</strong>
                 </p>
-
-                <!-- <p>
-                  Besides scientific research and learning, my hobbies are mainly electronic music production and arrangement. Check the link of Bilibili below to listen to my tracks.
-                </p> -->
                 <p>
                   <strong>My ideal is to follow my interests and create simple yet enjoyable work! 🌟</strong>
                 </p>
@@ -110,16 +109,9 @@
                 <p style="text-align:center">
                   <a href="data/resume.pdf">CV-en                         </a> &nbsp;·&nbsp;
                   <a href="data/resume-zh.pdf">CV-zh                         </a> &nbsp;·&nbsp;
-                  <!-- <a href="https://space.bilibili.com/195413691">Bilibili </a> &nbsp;·&nbsp; -->
                   <a href="https://www.zhihu.com/people/homybush">Zhihu   </a> &nbsp;·&nbsp;
                   <a href="https://github.com/HaoquanZhang">Github        </a> &nbsp;·&nbsp;
                   <a href="mailto:haoquanzhang@outlook.com">Email         </a>
-                  <!-- <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp; -->
-                  <!-- <a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Scholar</a> &nbsp;/&nbsp; -->
-                  <!-- <a href="https://www.threads.net/@jonbarron">Threads</a> &nbsp;/&nbsp;
-                  <a href="https://bsky.app/profile/jonbarron.bsky.social">Bluesky</a> &nbsp;/&nbsp;
-                  <a href="https://twitter.com/jon_barron">Twitter</a> &nbsp;/&nbsp; -->
-                  <!-- <a href="https://github.com/jonbarron/">Github</a> -->
                 </p>
               </td>
               <td style="padding:2.5%;width:40%;max-width:40%">
@@ -136,14 +128,14 @@
             </tr>
           </tbody>
           </table>
-
           
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <h2><strong>News📰</strong></h2>
-            </td>
-            </tr>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <h2><strong>News📰</strong></h2>
+                </td>
+              </tr>
             </tbody>
           </table>
   
@@ -172,7 +164,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody>
             <tr>
-              <td style="padding:10px;width:100px;vertical-align:middle">
+              <td style="padding:20px;width:100px;vertical-align:middle">
                 <img src="images/smu.svg" alt="Your Image Alt Text" style="width: 100%; height: auto;">
               </td>
         
@@ -217,7 +209,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody>
             <tr>
-              <td style="padding:10px;width:100px;vertical-align:middle">
+              <td style="padding:20px;width:100px;vertical-align:middle">
                 <img src="images/scut_logo.png" alt="Your Image Alt Text" style="width: 100%; height: auto;">
               </td>
         
