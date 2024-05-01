@@ -84,6 +84,7 @@ p,
 a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 16px;
+  font-size: inherit;
 }
 
 strong {
@@ -218,6 +219,7 @@ ul li a:hover{
 
 .item p {
   margin: 16px 0;
+  font-size: 14px;
 }
 
 .CVPR {
