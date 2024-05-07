@@ -245,3 +245,9 @@ ul li a:hover{
   background-color: #dedede; 
   color: #000000;
 }
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: rgb(215, 215, 215);
+}
