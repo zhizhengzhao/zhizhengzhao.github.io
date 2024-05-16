@@ -233,6 +233,17 @@ ul li a:hover{
   color: #ffffff;
 }
 
+.insub {
+  background-color: #b7b7b7; 
+  border-radius: 4px; 
+  padding-left: 3px; 
+  padding-right: 3px; 
+  padding-top: 2px; 
+  padding-bottom: 2px; 
+  display: inline-block; 
+  color: #ffffff;
+}
+
 .interest {
   background-color: #ffffff; 
   border-radius: 4px; 
