@@ -262,3 +262,8 @@ hr {
   height: 1px;
   background-color: rgb(215, 215, 215);
 }
+
+
+#microsoft-emoji {
+  font-family: "Segoe UI Emoji", "Segoe UI", Arial, sans-serif;
+}
