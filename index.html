@@ -63,17 +63,6 @@
     <table style="max-width:900px;margin:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px"> 
-
-          <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;padding-top: 10%"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle;text-align: center;">
-              <img style="width: 70%;" src="images/new-year/jinglongxianrui.svg"><br><br>
-              <strong style="font-size: large; color: rgb(238, 115, 0);">🏮HAPPY CHINESE NEW YEAR!🏮</strong>
-            </td>
-            </tr>
-            </tbody>
-          </table> -->
-
           
           <section style="padding-top:0;" id="Top"></section>
           <table style="max-width:900px;margin:auto;padding-top: 5%;">
@@ -94,11 +83,6 @@
                 <p>
                   <strong>My ideal is to follow my interests and create simple yet enjoyable work! 🌟</strong>
                 </p>
-
-                
-                <!-- <p style="color: rgb(208, 26, 26);font-size: large;">
-                  PS: I'm currently seeking opportunities for research internships/assistantships during the spring and summer seasons.
-                </p> -->
                 
                 
                 <p style="text-align:center">
@@ -110,15 +94,47 @@
                 </p>
               </td>
               <td style="padding:2.5%;width:40%;max-width:40%">
-                <a >
-                  <img 
-                  style="width:100%;
-                  max-width:100%;
-                  object-fit: cover; 
-                  border-radius: 50%;" 
-                  alt="profile photo" 
-                  src="images/whale-in-da-cloud.png" 
-                  class="hoverZoomLink"></a>
+                <div onmouseout="icon_stop()" onmouseover="icon_start()">
+                  <div class="one">
+                    <div class="two" id='face'>
+                      <img style="width:100%;
+                      max-width:100%;
+                      object-fit: cover; 
+                      border-radius: 50%;" 
+                      alt="profile photo" 
+                      src="images/myFace.jpg">
+
+                      <p style="text-align: center;color: rgb(161, 161, 161);"><em>Now you’ve caught me</em></p>
+                    </div>
+
+                    <div id='whaleImg'>
+                      <img style="width:100%;
+                      max-width:100%;
+                      object-fit: cover; 
+                      border-radius: 50%;" 
+                      alt="profile photo" 
+                      src="images/wc_icon.png">
+
+                      <p style="text-align: center;color: rgb(161, 161, 161);"><em>Something sneaky in here?</em></p>
+                    </div>
+                
+                    <script type="text/javascript">
+                      function icon_start() {
+                        document.getElementById('face').style.opacity = "1";
+                        document.getElementById('whaleImg').style.opacity = "0";
+                      }
+                  
+                      function icon_stop() {
+                        // 这里保持为空函数，使鼠标移开时不执行任何操作
+                      }
+                  
+                      // 初始化
+                      document.getElementById('face').style.opacity = "0";
+                      document.getElementById('whaleImg').style.opacity = "1";
+                    </script>
+
+                  </div>
+                </div>
               </td>
             </tr>
           </tbody>
@@ -219,7 +235,7 @@
                   <!-- <br>
                    (<a href="https://www2.scut.edu.cn/ft/">School of FutureTech.</a>), -->
                   <br>
-                  Cross-modal Recognition and Grounding, advised by <a href="https://scholar.google.com/citations?user=cC_WhWkAAAAJ">Prof. Huaidong Zhang</a> .
+                  Multi-Modal Recognition and Grounding, advised by <a href="https://scholar.google.com/citations?user=cC_WhWkAAAAJ">Prof. Huaidong Zhang</a> .
                 </p>
                   <p>
                     Guangzhou, China.<br>
