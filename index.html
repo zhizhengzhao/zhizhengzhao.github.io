@@ -6,7 +6,9 @@
     <meta name="author" content="HaoquanZhang">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/whale.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 601px)">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 600px)">
 
   </head>
 
@@ -182,7 +184,10 @@
               </td>
         
               <td style="padding:20px;width:auto;vertical-align:middle">
-                <p><strong style="font-size: larger;">Singapore Managment University</strong>, <em>Research Intern</em>
+                <p><strong style="font-size: larger;">Singapore Managment University</strong>, 
+                  <br>
+                  <em>Research Intern</em>
+                  <br>
 
                   <br>
                   3D Reconstruction,
@@ -207,7 +212,10 @@
               </td>
         
               <td style="padding:20px;width:auto;vertical-align:middle">
-                <p><strong style="font-size: larger;">South China University of Technology</strong>, <em>Research Intern</em>
+                <p><strong style="font-size: larger;">South China University of Technology</strong>, 
+                  <br>
+                  <em>Research Intern</em>
+                  <br>
                   <br>
                   Application of Vision Language Model, advised by <a href="https://scholar.google.com/citations?user=cC_WhWkAAAAJ">Prof. Huaidong Zhang</a> .
                 </p>
@@ -251,273 +259,142 @@
             </td>
           </tr>
         </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr onmouseout="m4a_stop()" onmouseover="m4a_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <!-- <div class="one">
-                  <img src='images/M4A.png' width="160"> -->
 
-                <div class="one">
-                <img src='images/M4A.png' width="180">
-                </div>
+          <div class="paper-container">
+            <div class="image">
+              <img src='images/M4A.png' alt="Mask4Align">
+            </div>
+            <div class="text">
+              <span class="papertitle">Mask4Align: Aligned Entity Prompting with Color Masks for Multi-Entity Localization Problems</span><br>
+              
+              <p>
+                <strong>Haoquan Zhang</strong>,
+                Ronggang Huang,
+                Yi Xie,
+                <a href="https://scholar.google.com/citations?user=cC_WhWkAAAAJ">Huaidong Zhang</a>
+              </p>
+        
+              <p>
+                Pretrained VLMs excel in accurately recognizing and precisely localizing entities within VQA tasks. However, in visual scenes with multiple entities, textual descriptions struggle to distinguish the entities from the same category effectively. Consequently, the existing VQA dataset cannot adequately cover scenarios involving multiple entities. Therefore, we introduce a Mask for Align (Mask4Align) method to determine the entity's position in the given image that best matches the user input question. This method incorporates colored masks into the image, enabling the VQA model to handle discrimination and localization challenges associated with multiple entities.
+              </p>
+        
+              <p>
+                <strong class="buttom">[Paper]</strong>
+                <strong class="buttom"><a href="https://github.com/HaoquanZhang/mask4align">[Code]</a></strong>
+                <strong class="buttom"><a href="https://www.zhihu.com/question/627841035/answer/3286130863">[Submission Journey]</a></strong>  
+              </p>
+        
+              <div class="CVPR">
+                <strong>CVPR 2024</strong>
+              </div>
+            </div>
+          </div>
 
-                  <script type="text/javascript">
-                    function m4a_start() {
-                      document.getElementById('difsurvey_image').style.opacity = "1";
-                    }
-            
-                    function m4a_stop() {
-                      document.getElementById('difsurvey_image').style.opacity = "0";
-                    }
-                    m4a_stop();
-                  </script>
-                </div>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <!-- <a href="https://arxiv.org/abs/2310.07204"> -->
-                <span class="papertitle" style="font-size: larger;">Mask4Align: Aligned Entity Prompting with Color Masks for Multi-Entity Localization Problems</span><br>
-                
-                <p>
-                  <strong>Haoquan Zhang</strong>,
-                  Ronggang Huang,
-                  Yi Xie,
-                  <a href="https://scholar.google.com/citations?user=cC_WhWkAAAAJ">Huaidong Zhang</a>
-                </p>
-
-                <p>
-                  Pretrained VLMs excel in accurately recognizing and precisely localizing entities within VQA tasks. However, in visual scenes with multiple entities, textual descriptions struggle to distinguish the entities from the same category effectively. Consequently, the existing VQA dataset cannot adequately cover scenarios involving multiple entities. Therefore , we introduce a Mask for Align (Mask4Align) method to determine the entity's position in the given image that best matches the user input question. This method incorporates colored masks into the image, enabling the VQA model to handle discrimination and localization challenges associated with multiple entities.
-                </p>
-
-                <p>
-                  <strong class="buttom">[Paper]</strong>
-                  <strong class="buttom"><a href="https://github.com/HaoquanZhang/mask4align">[Code]</a></strong>
-                  <strong class="buttom"><a href="https://www.zhihu.com/question/627841035/answer/3286130863">[Submission Journey]</a></strong>  
-                </p>
-
-                <div class="CVPR">
-                  <strong>CVPR 2024</strong>
-                </div>
-              </td>
-            </tr>
-            
-
-          </tbody></table>
-
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr onmouseout="m4a_stop()" onmouseover="m4a_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <!-- <div class="one">
-                  <img src='images/M4A.png' width="160"> -->
-
-                <div class="one">
-                <img src='images/SCD-2024.png' width="180">
-                </div>
-
-                  <script type="text/javascript">
-                    function m4a_start() {
-                      document.getElementById('difsurvey_image').style.opacity = "1";
-                    }
-            
-                    function m4a_stop() {
-                      document.getElementById('difsurvey_image').style.opacity = "0";
-                    }
-                    m4a_stop();
-                  </script>
-                </div>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <!-- <a href="https://arxiv.org/abs/2310.07204"> -->
-                <span class="papertitle" style="font-size: larger;">Asymmetric Image Retrieval with Semi-Collaborative Distillation</span><br>
-                
-                <p>
-                  Yi Xie*,
-                  <strong>Haoquan Zhang*</strong>,
-                  Xuandi Luo,
-                  Huaidong Zhang,
-                  Xuemiao Xu,
-                  <a href="http://www.shengfenghe.com/">Shengfeng He</a>
-                  <br>
-                  <em style="color: rgb(160, 160, 160);font-size: smaller;">* Co-first authorship</em>
-                </p>
-
-                
-
-                <p>
-                  In asymmetric image retrieval systems, there is a significant capacity gap between the query and gallery network. The low-capacity query network struggles to effectively store and understand knowledge from the high-capacity teacher network. Therefore, we introduce a simple yet effective semi-collaborative distillation (SCD) framework, which can additionally adjust the gallery network because the gallery network has a redundant capacity to carry specific knowledge from the query network. Specifically, as the query network converges, we incrementally unfreeze the gallery network to smoothly adjust the feature space of the gallery network to be consistent with that of the query network.
-                </p>
-
-                <div class="insub">
-                  <strong>Under Review</strong>
-                </div>
-              </td>
-            </tr>
-            
-
-          </tbody></table>
+          <div class="paper-container">
+            <div class="image">
+              <img src='images/SCD-2024.png' alt="Mask4Align">
+            </div>
+            <div class="text">
+              <span class="papertitle">Asymmetric Image Retrieval with Semi-Collaborative Distillation</span><br>
+              
+              <p>
+                Yi Xie*,
+                <strong>Haoquan Zhang*</strong>,
+                Xuandi Luo,
+                Huaidong Zhang,
+                Xuemiao Xu,
+                <a href="http://www.shengfenghe.com/">Shengfeng He</a>
+                <br>
+                <em style="color: rgb(160, 160, 160);font-size: smaller;">* Co-first authorship</em>
+              </p>
+        
+              <p>
+                In asymmetric image retrieval systems, there is a significant capacity gap between the query and gallery network. The low-capacity query network struggles to effectively store and understand knowledge from the high-capacity teacher network. Therefore, we introduce a simple yet effective semi-collaborative distillation (SCD) framework, which can additionally adjust the gallery network because the gallery network has a redundant capacity to carry specific knowledge from the query network. Specifically, as the query network converges, we incrementally unfreeze the gallery network to smoothly adjust the feature space of the gallery network to be consistent with that of the query network.
+              </p>
+        
+              <p>
+                <strong class="buttom">[Paper]</strong>
+                <strong class="buttom">[Code]</strong> 
+              </p>
+        
+              <div class="insub">
+                <strong>Under Review</strong>
+              </div>
+            </div>
+          </div>
 
           <hr>
           <section id="Projects"></section>
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-            <tr>
-              <td>
-                <h2><strong>Projects 📂</strong></h2>
-              </td>
-            </tr>
-          </tbody></table>
-
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-            <tr onmouseout="bme_stop()" onmouseover="bme_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <img src='images/BEM2023CONTEST.png' width="180">
-                  <script type="text/javascript">
-                    function bme_start() {
-                      document.getElementById('difsurvey_image').style.opacity = "1";
-                    }
-            
-                    function bme_stop() {
-                      document.getElementById('difsurvey_image').style.opacity = "0";
-                    }
-                    bme_stop();
-                  </script>
-                </div>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <span class="papertitle">Design of Auxiliary Diagnosis Algorithm for Schizophrenia Based on Feature Fusion of EEG and ECG</span><br>
-                <strong><a href="NBMEC_2023/B030079.pdf">[Entry (Chinese)]</a></strong>
-                <p></p>
-
-                <em>Entry<em>, 2023, National Biomedical Engineering lnnovation Design Competition for College Students
-                <br>
-                <p></p>
-                <p>
-                  Calculated brain functional network features, heart rate variability features and heart-brain coupling features to build machine learning models for automatic diagnosis; Deep learning models using ResNet were built based on original EEG and ECG also.
-                </p>
-                <p><strong>Second Prize. (6%)</strong></p>
-                <p style="color: rgb(160, 160, 160);font-size: smaller;">
-                  This work has been further developed by a team member and has been submitted to the IEEE Transactions on Neural Systems & Rehabilitation Engineering for review.
-                </p>
-              </td>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <h2><strong>Projects 📂</strong></h2>
+            </td>
             </tr>
-          </tbody></table>
+            </tbody>
+          </table>
 
-            <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr onmouseout="eeg_stop()" onmouseover="eeg_start()">
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <div class="one">
-                    <img src='images/3dDetector.png' width="160">
-                    <script type="text/javascript">
-                      function eeg_start() {
-                        document.getElementById('difsurvey_image').style.opacity = "1";
-                      }
-              
-                      function eeg_stop() {
-                        document.getElementById('difsurvey_image').style.opacity = "0";
-                      }
-                      eeg_stop();
-                    </script>
-                  </div>
-                </td>
-                <td style="padding:20px;width:75%;vertical-align:middle">
-                  <span class="papertitle">The Development of Grid-based 3D Object Detectors: A Comprehensive Survey</span><br>
-                  <strong><a href="data/Survey.pdf">[Paper]</a></strong>
-                  <p></p>
+          <div class="paper-container">
+            <div class="image">
+              <img src='images/BEM2023CONTEST.png' alt="BEM 2023 Contest" >
+            </div>
+            <div class="text">
+              <span class="papertitle">Design of Auxiliary Diagnosis Algorithm for Schizophrenia Based on Feature Fusion of EEG and ECG</span><br>
+              <strong><a href="NBMEC_2023/B030079.pdf">[Entry (Chinese)]</a></strong>
+              <p></p>
+              <em>Entry</em>, 2023, National Biomedical Engineering Innovation Design Competition for College Students
+              <br>
+              <p></p>
+              <p>
+                Calculated brain functional network features, heart rate variability features and heart-brain coupling features to build machine learning models for automatic diagnosis; Deep learning models using ResNet were built based on original EEG and ECG also.
+              </p>
+              <p><strong>Second Prize. (6%)</strong></p>
+              <p style="color: rgb(160, 160, 160);font-size: smaller;">
+                This work has been further developed by a team member and has been submitted to the IEEE Transactions on Neural Systems & Rehabilitation Engineering for review.
+              </p>
+            </div>
+          </div>
 
-                  <em>Course Paper<em>, 2023, 3D Vision and Artificial Intelligence
-                  <br>
-                  <p></p>
-                  <p>
-                    This paper centers around two backbone structures in visual processing, namely CNN and transformer, providing a detailed exposition of 3D point cloud detection methods based on these frameworks. Presented in chronological order, the paper narrates the developmental processes of these detectors and elucidates their respective unique innovations.
-                  </p>
-                  <p><strong>Final Score: 95, 4.0/4.0.</strong></p>
-                </td>
-              </tr>
-            </tbody></table> -->
+            <div class="paper-container" >
+              <div class="image" onmouseout="gun_stop()" onmouseover="gun_start()">
+                <img src='images/gunmayhem_logo.png'>
+              </div>
+              <div class="text">
+                <span class="papertitle">Perfect GunMayhem Remake: A 2D Shooting PVP Game Based on Cocos2d-x</span><br>
+                <strong><a href="https://github.com/Randonee1/Advanced-Language-Programming">[Github]</a></strong> · 
+                <strong><a href="GunMayhem/gunMayhem.html">[Project Page]</a></strong> · 
+                <strong><a href="https://gun-mayhem-2.github.io/">[Original Game]</a></strong> · 
+                <strong><a href="/GunMayhem/gunmayhem_GameArts.zip">[Art Assets]</a></strong>
+                <br><br>
+                <em>Course design</em>, 2022, Advanced Language Programming (C++)
+                <br>
+                <p> 
+                  GunMayhem Remake is a project independently completed by our team members, covering all aspects, including source code, game artwork, and music assets. You can play our <a href="https://github.com/Randonee1/Advanced-Language-Programming/tree/main/dist">executable file</a>.
+                </p>
+                <p>
+                  <span style="color: rgb(182, 48, 240);">Shoutout to <a href="https://www.thekevingu.com/">Kevin Gu</a> for creating this incredible game!</span>
+                </p>
+                <p><strong>Final Score: 99, 4.0/4.0. (1%)</strong></p>
+              </div>
+            </div>
 
-            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr onmouseout="gun_stop()" onmouseover="gun_start()">
-                <td style="padding:20px;width:25%;vertical-align:middle">
-
-                  <div class="one">
-                    <div class="two" id='GunMayhem'>
-                    <img src='images/gunmayhem.png' width="180">
-                    </div>
-                  <img src='images/gunmayhem_logo.png' width="180">
-                  
-
-                    <script type="text/javascript">
-                      function gun_start() {
-                        document.getElementById('GunMayhem').style.opacity = "1";
-                      }
-              
-                      function gun_stop() {
-                        document.getElementById('GunMayhem').style.opacity = "0";
-                      }
-                      gun_stop();
-                    </script>
-                  </div>
-                </td>
-                <td style="padding:20px;width:75%;vertical-align:middle">
-                  <span class="papertitle">Perfect GunMayhem Remake: A 2D Shooting PVP Game Based on Cocos2d-x</span> <br>
-                  <strong><a href="https://github.com/Randonee1/Advanced-Language-Programming">[Github]</a></strong> · 
-                  <strong><a href="GunMayhem/gunMayhem.html">[Project Page]</a></strong> · 
-                  <strong><a href="https://gun-mayhem-2.github.io/">[Original Game]</a></strong> · 
-                  <strong><a href="/GunMayhem/gunmayhem_GameArts.zip">[Art Assets]</a></strong>
-                  <!-- <p></p>
-                  Zhengte Cai, 
-                  Qinxiao Quan, 
-                  Weijie Li, 
-                  <strong>Haoquan Zhang</strong><br> -->
-                  <br><br>
-
-                  <em>Course design<em>, 2022, Advanced Language Programming (C++)
-                  <br>
-                  <p></p>
-                  <p> 
-                    GunMayhem Remake is a project independently completed by our team members, covering all aspects, including source code, game atrwork, and music assets. You can play our  <a href="https://github.com/Randonee1/Advanced-Language-Programming/tree/main/dist">executable file</a>.
-                  </p>
-                  <p>
-                    <span style="color: rgb(182, 48, 240);">Shoutout to <a href="https://www.thekevingu.com/">Kevin Gu</a> for creating this incredible game!</span>
-                  </p>
-                  <p><strong>Final Score: 99, 4.0/4.0. (1%)</strong></p>
-                </td>
-              </tr>
-            </tbody></table>
-
-            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr onmouseout="eeg_stop()" onmouseover="eeg_start()">
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <div class="one">
-                    <img src='images/eeg-monitor.png' width="180">
-                    <script type="text/javascript">
-                      function eeg_start() {
-                        document.getElementById('difsurvey_image').style.opacity = "1";
-                      }
-              
-                      function eeg_stop() {
-                        document.getElementById('difsurvey_image').style.opacity = "0";
-                      }
-                      eeg_stop();
-                    </script>
-                  </div>
-                </td>
-                <td style="padding:20px;width:75%;vertical-align:middle">
-                  <span class="papertitle">Limbs Motor Function Monitoring System Based on EEG and EMG Detection and Analysis</span><br>
-                  <strong><a href="LimbMonitor/Poster.pdf">[Poster]</a></strong> · 
-                  <strong><a href="LimbMonitor/bme-2022-intro.pptx">[Poster Source File (.pptx)]</a></strong>
-                  <p></p>
-
-                  <em>Course design<em>, 2021, Exploration and Design of Biomedical Engineering
-                  <br>
-                  <p></p>
-                  <p>
-                    Built an automatic classification system to assess the subject’s weight-bearing status based on EEG and EMG. This design is an exploration of the ability of EEG and EMG to assess the motor status of stroke patients. 
-                  </p>
-                  <p><strong>Final Score: 92, 4.0/4.0.</strong></p>
-                </td>
-              </tr>
-            </tbody></table>
+            <div class="paper-container">
+              <div class="image">
+                <img src='images/eeg-monitor.png' alt="EEG Monitor">
+              </div>
+              <div class="text">
+                <span class="papertitle">Limbs Motor Function Monitoring System Based on EEG and EMG Detection and Analysis</span><br>
+                <strong><a href="LimbMonitor/Poster.pdf">[Poster]</a></strong> · 
+                <strong><a href="LimbMonitor/bme-2022-intro.pptx">[Poster Source File (.pptx)]</a></strong>
+                <br><br>
+                <em>Course design</em>, 2021, Exploration and Design of Biomedical Engineering
+                <br>
+                <p>
+                  Built an automatic classification system to assess the subject’s weight-bearing status based on EEG and EMG. This design is an exploration of the ability of EEG and EMG to assess the motor status of stroke patients.
+                </p>
+                <p><strong>Final Score: 92, 4.0/4.0.</strong></p>
+              </div>
+            </div>
 
           <hr>
           <section id="Awards"></section>
