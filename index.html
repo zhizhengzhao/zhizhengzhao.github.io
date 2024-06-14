@@ -44,7 +44,7 @@
       var navbarHeightDesktop = document.querySelector('.desktop-component ul').offsetHeight;
   
       // Add click event listeners to navigation links
-      document.querySelectorAll('.mobile-component ul li a, .desktop-component ul li a').forEach(function(anchor) {
+      document.querySelectorAll('.mobile-component ul li a, .desktop-component ul li a, .a').forEach(function(anchor) {
           anchor.addEventListener('click', function(event) {
               event.preventDefault(); // Prevent the default navigation behavior
   
@@ -157,6 +157,10 @@
             <tbody>
               <tr>
                 <td style="padding:20px;width:85%;vertical-align:middle">
+
+                  <p style="color: rgb(59, 59, 59);font-size: larger;">
+                    <strong>[2024/6/14]</strong> - Mask4Align now released!
+                  </p>
                   <p style="color: rgb(59, 59, 59);font-size: larger;">
                     <strong>[2024/2/27]</strong> - My first paper accepted by CVPR 2024! See you in Seattle! 
                   </p>
@@ -260,6 +264,8 @@
           </tr>
         </tbody></table>
 
+        <section id="Mask4Align"></section>
+
           <div class="paper-container">
             <div class="image">
               <img src='images/M4A.png' alt="Mask4Align">
@@ -279,7 +285,7 @@
               </p>
         
               <p>
-                <strong class="buttom">[Paper]</strong>
+                <strong class="buttom"><a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Mask4Align_Aligned_Entity_Prompting_with_Color_Masks_for_Multi-Entity_Localization_CVPR_2024_paper.pdf">[Paper]</a></strong>
                 <strong class="buttom"><a href="https://github.com/HaoquanZhang/mask4align">[Code]</a></strong>
                 <strong class="buttom"><a href="https://www.zhihu.com/question/627841035/answer/3286130863">[Submission Journey]</a></strong>  
               </p>
