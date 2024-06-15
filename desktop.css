@@ -299,6 +299,7 @@ hr {
 .paper-container .text {
   flex: 1;
   padding-left: 20px;
+  text-align: justify;
 }
 .paper-container img {
   max-width: 100%;
@@ -308,4 +309,38 @@ hr {
 td {
   padding-left: 2px;
   padding-right: 2px;
+}
+
+.bio {
+  flex: 1 1 70%;
+  padding: 2.5%;
+}
+.bio p {
+  text-align: justify; /* Adjust text alignment as needed */
+}
+.links {
+  text-align: center;
+  margin-top: 1em;
+}
+.links a {
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.face-name {
+  padding-top: 10px;
+  display: flex;
+  align-items:center;
+}
+
+.profile-img {
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.name-info {
+  flex: 1;
+  font-size: 30px;
 }
