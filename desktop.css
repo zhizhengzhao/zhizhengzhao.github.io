@@ -313,7 +313,7 @@ td {
 
 .bio {
   flex: 1 1 70%;
-  padding: 2.5%;
+  padding: 20px;
 }
 .bio p {
   text-align: justify; /* Adjust text alignment as needed */
