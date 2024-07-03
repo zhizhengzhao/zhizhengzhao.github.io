@@ -344,3 +344,13 @@ td {
   flex: 1;
   font-size: 30px;
 }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-container img {
+  height: 50px;
+  margin-right: 10px;
+}

@@ -337,15 +337,22 @@ td {
   flex-wrap: nowrap;
   align-content: center;
 }
-
 .profile-img {
   width: 150px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 20px;
 }
-
 .name-info {
   flex: 1;
   font-size: 30px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-container img {
+  height: 50px;
+  margin-right: 10px;
 }
