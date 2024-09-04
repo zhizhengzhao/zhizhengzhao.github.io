@@ -355,7 +355,7 @@ td {
 }
 .logo-container img {
   height: 50px;
-  width: 50px;
+  /* width: 50px; */
   margin-right: 5px;
   margin-left: 5px;
 }
