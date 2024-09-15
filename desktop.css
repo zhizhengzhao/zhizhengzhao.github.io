@@ -290,6 +290,10 @@ hr {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  background: linear-gradient(110deg, #ffffff, #ffffff, #ffffff,#ffffff,#ffffff, #c9e2f1, #92a6cb);
+  background-size: 200% 200%;
+  background-position: left;
+  transition: background-position 0.25s ease;
 }
 .paper-container .image {
   flex: 1;
@@ -306,6 +310,13 @@ hr {
   max-width: 100%;
   height: auto;
 }
+
+.paper-container:hover {
+  background-position: right;
+}
+
+
+
 
 td {
   padding-left: 2px;
