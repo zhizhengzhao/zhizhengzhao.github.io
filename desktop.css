@@ -294,6 +294,7 @@ hr {
   background-size: 200% 200%;
   background-position: left;
   transition: background-position 0.25s ease;
+  border-radius: 10px;
 }
 .paper-container .image {
   flex: 1;
