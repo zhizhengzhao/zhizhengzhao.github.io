@@ -372,3 +372,27 @@ td {
   margin-left: 5px;
   border-radius: 10%;
 }
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+.event {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+.date {
+  font-weight: bold;
+  width: 150px; /* Adjust width as needed */
+  text-align: right;
+  padding-right: 10px;
+}
+.description {
+  flex-grow: 1;
+  padding-left: 10px;
+}
