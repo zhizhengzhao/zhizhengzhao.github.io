@@ -388,8 +388,7 @@ td {
 }
 .date {
   font-weight: bold;
-  width: 150px; /* Adjust width as needed */
-  text-align: right;
+  text-align:center;
   padding-right: 10px;
 }
 .description {
