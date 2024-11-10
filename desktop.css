@@ -64,13 +64,13 @@
 }
 
 a {
-  color: #2d6bc7;
+  color: #1f8c12;
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #eb700b;
+  color: #eb430b;
   text-decoration: none;
 }
 
@@ -130,10 +130,6 @@ h2 {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -webkit-transition: opacity .2s ease-in-out;
-}
-
-span.highlight {
-  background-color: #ffffd0;
 }
 
 section {
@@ -290,7 +286,7 @@ hr {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: linear-gradient(110deg, #ffffff, #ffffff, #ffffff,#ffffff,#ffffff, #e1ebf2, #c9d4e8);
+  background: linear-gradient(110deg, #ffffff, #ffffff, #ffffff,#ffffff,#ffffff, #e1f2e2, #e8e5c9);
   background-size: 200% 200%;
   background-position: left;
   transition: background-position 0.25s ease;
