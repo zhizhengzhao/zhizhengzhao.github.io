@@ -286,7 +286,7 @@ hr {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: linear-gradient(110deg, #ffffff, #ffffff, #ffffff,#ffffff,#ffffff, #e1f2e2, #e8e5c9);
+  background: linear-gradient(110deg, #ffffff, #ffffff, #ffffff,#ffffff,#ffffff, #e1ebf2, #c9e8e8);
   background-size: 200% 200%;
   background-position: left;
   transition: background-position 0.25s ease;
