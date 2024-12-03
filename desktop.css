@@ -312,6 +312,36 @@ hr {
   background-position: right;
 }
 
+.experience-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(110deg, #ffffff, #ffffff, #ffffff,#ffffff,#ffffff, #e1ebf2, #c9e8e8);
+  background-size: 200% 200%;
+  background-position: left;
+  transition: background-position 0.25s ease;
+  border-radius: 10px;
+}
+.experience-container .image {
+  flex: 1;
+  max-width: 80px;
+  text-align: top;
+  padding-right:20px;
+}
+.experience-container .text {
+  flex: 1;
+  padding-left: 20px;
+  text-align: justify;
+}
+.experience-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.experience-container:hover {
+  background-position: right;
+}
 
 
 
