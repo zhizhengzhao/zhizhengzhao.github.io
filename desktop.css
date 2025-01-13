@@ -421,3 +421,44 @@ td {
   flex-grow: 1;
   padding-left: 10px;
 }
+
+/* Print styles */
+@media print {
+  /* Ensure content is not truncated */
+  * {
+    overflow: visible !important;
+  }
+
+  /* Adjust page margins */
+  body {
+    padding: 0;
+  }
+
+  /* Ensure images don't exceed page width */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  .profile-img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Prevent elements from breaking across pages */
+  .paper-container,
+  .experience-container {
+    page-break-inside: avoid;
+  }
+
+  /* Hide navigation and other non-essential elements for print */
+  .mobile-component,
+  .desktop-component {
+    display: none !important;
+  }
+
+  /* Adjust table layout */
+  table {
+    page-break-inside: avoid;
+  }
+}
