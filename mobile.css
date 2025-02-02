@@ -447,54 +447,24 @@ td {
   padding-left: 10px;
 }
 
-/* 教育部分整体布局 */
-.edu-sec {
-  display: flex;
-  /* 使用 Flexbox 布局 */
-  flex-direction: column;
-  /* 垂直排列 */
-  align-items: flex-start;
-  /* 左对齐 */
-  margin: 20px 0;
-  /* 上下留出间距 */
-}
 
-/* Logo 容器 */
-.edu-logo {
-  margin-right: 0;
-  margin-bottom: 10px;
-  /* Logo 和文字之间的间距 */
-}
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .edu-container {
+    padding: 15px;
+    /* 减少内边距 */
+  }
 
-/* Logo 图片 */
-.edu-logo img {
-  width: 60px;
-  /* 调整 Logo 大小（比桌面版小） */
-  height: auto;
-  /* 保持比例 */
-  border-radius: 8px;
-  /* 可选：圆角效果 */
-}
+  .edu-logo {
+    flex: 0 0 60px;
+    /* 缩小图片宽度 */
+    padding-right: 15px;
+  }
 
-/* 文字部分 */
-.edu-details {
-  flex: 1;
-  /* 占据剩余空间 */
-}
-
-.edu-details p {
-  margin: 5px 0;
-  /* 调整段落间距 */
-  line-height: 1.5;
-  /* 行高 */
-}
-
-.edu-details strong {
-  font-size: 1.1em;
-  /* 加粗字体大小（比桌面版小） */
-}
-
-.edu-details i {
-  color: #555;
-  /* 斜体字颜色 */
+  .edu-details p {
+    font-size: 14px;
+    /* 缩小字体大小 */
+    margin: 4px 0;
+    /* 进一步减少段落间距 */
+  }
 }

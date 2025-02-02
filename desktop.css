@@ -491,35 +491,33 @@ td {
   }
 }
 
-/* 教育部分整体布局 */
-.edu-sec {
+/* Desktop Styles */
+.edu-container {
   display: flex;
-  /* 使用 Flexbox 布局 */
   align-items: center;
-  /* 垂直居中 */
-  margin: 20px 0;
-  /* 上下留出间距 */
+  justify-content: flex-start;
+  /* 左对齐 */
+  padding: 20px;
+  background: linear-gradient(110deg, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #e1ebf2, #c9e8e8);
+  background-size: 200% 200%;
+  background-position: left;
+  transition: background-position 0.25s ease;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  /* 增加间距 */
 }
 
-/* Logo 容器 */
 .edu-logo {
-  flex: 0 0 auto;
-  /* 不伸缩，固定宽度 */
-  margin-right: 20px;
-  /* Logo 和文字之间的间距 */
+  flex: 0 0 80px;
+  /* 固定宽度 */
+  padding-right: 20px;
 }
 
-/* Logo 图片 */
 .edu-logo img {
-  width: 80px;
-  /* 调整 Logo 大小 */
+  max-width: 100%;
   height: auto;
-  /* 保持比例 */
-  border-radius: 8px;
-  /* 可选：圆角效果 */
 }
 
-/* 文字部分 */
 .edu-details {
   flex: 1;
   /* 占据剩余空间 */
@@ -528,16 +526,8 @@ td {
 .edu-details p {
   margin: 5px 0;
   /* 调整段落间距 */
-  line-height: 1.5;
-  /* 行高 */
 }
 
-.edu-details strong {
-  font-size: 1.2em;
-  /* 加粗字体大小 */
-}
-
-.edu-details i {
-  color: #555;
-  /* 斜体字颜色 */
+.edu-container:hover {
+  background-position: right;
 }
