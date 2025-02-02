@@ -491,19 +491,53 @@ td {
   }
 }
 
+/* 教育部分整体布局 */
 .edu-sec {
   display: flex;
+  /* 使用 Flexbox 布局 */
   align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: left;
+  /* 垂直居中 */
+  margin: 20px 0;
+  /* 上下留出间距 */
 }
 
+/* Logo 容器 */
+.edu-logo {
+  flex: 0 0 auto;
+  /* 不伸缩，固定宽度 */
+  margin-right: 20px;
+  /* Logo 和文字之间的间距 */
+}
+
+/* Logo 图片 */
 .edu-logo img {
-  max-width: 100%;
+  width: 80px;
+  /* 调整 Logo 大小 */
   height: auto;
+  /* 保持比例 */
+  border-radius: 8px;
+  /* 可选：圆角效果 */
 }
 
+/* 文字部分 */
 .edu-details {
-  margin-left: 20px;
+  flex: 1;
+  /* 占据剩余空间 */
+}
+
+.edu-details p {
+  margin: 5px 0;
+  /* 调整段落间距 */
+  line-height: 1.5;
+  /* 行高 */
+}
+
+.edu-details strong {
+  font-size: 1.2em;
+  /* 加粗字体大小 */
+}
+
+.edu-details i {
+  color: #555;
+  /* 斜体字颜色 */
 }
