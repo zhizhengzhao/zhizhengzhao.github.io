@@ -390,7 +390,7 @@ td {
 .face-name {
   padding-top: 10px;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-evenly;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
@@ -406,7 +406,7 @@ td {
 .name-info {
   flex: 1;
   font-size: 30px;
-  margin-top: -10px;
+
 }
 
 .logo-container {
