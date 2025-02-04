@@ -390,7 +390,7 @@ td {
 .face-name {
   padding-top: 10px;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-evenly;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
