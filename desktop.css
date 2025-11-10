@@ -387,7 +387,7 @@ ul li a:hover {
   display: flex;
   align-items: center;
   gap: 30px;
-  padding: 28px;
+  padding: 24px;
   background: var(--bg-primary);
   border-radius: 12px;
   border: 1px solid var(--border-color);

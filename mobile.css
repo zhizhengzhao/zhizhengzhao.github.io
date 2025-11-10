@@ -299,7 +299,7 @@ ul li a:active {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 20px;
+  padding: 18px;
   background: var(--bg-primary);
   border-radius: 10px;
   border: 1px solid var(--border-color);
