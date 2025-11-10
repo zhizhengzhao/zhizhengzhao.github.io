@@ -340,6 +340,7 @@ ul li a:active {
   font-weight: 600;
   font-size: 12px;
   margin-top: 8px;
+  margin-left: -6px;
   box-shadow: var(--shadow-sm);
 }
 
