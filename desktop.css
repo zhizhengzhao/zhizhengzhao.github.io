@@ -280,7 +280,7 @@ ul li a:hover {
   height: 160px;
   border-radius: 16px;
   object-fit: cover;
-  object-position: center 35%;
+  object-position: center 0%;
   box-shadow: var(--shadow-lg);
   border: 3px solid var(--primary-light);
   transition: transform 0.3s ease;
@@ -419,6 +419,16 @@ ul li a:hover {
   box-shadow: var(--shadow-lg);
   transform: translateX(4px);
   border-color: var(--primary-light);
+}
+
+.experience-container.no-hover:hover {
+  box-shadow: var(--shadow-sm);
+  transform: none;
+  border-color: var(--border-color);
+}
+
+.experience-container.no-hover:hover::before {
+  transform: scaleY(0);
 }
 
 .experience-container .image {
