@@ -242,11 +242,10 @@ ul li a:hover {
 
 .main-container {
   max-width: 900px;
-  margin: 80px auto 0 auto;
-  padding: 0;
+  margin: auto;
+  padding-top: 30px;
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
+  border-collapse: collapse;
 }
 
 /* ============================================
