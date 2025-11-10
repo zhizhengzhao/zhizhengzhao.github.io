@@ -101,9 +101,6 @@
    BASE STYLES
    ============================================ */
 
-* {
-  transition: all 0.3s ease;
-}
 
 body {
   margin: 0;
@@ -147,7 +144,7 @@ h3 {
 a {
   color: var(--primary-color);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
   position: relative;
 }
 
@@ -202,7 +199,7 @@ ul li a {
   display: block;
   color: var(--text-primary);
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease, transform 0.3s ease;
   border-bottom: 2px solid transparent;
 }
 
@@ -314,7 +311,7 @@ ul li a:hover {
   padding: 8px 16px;
   background-color: var(--bg-tertiary);
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   font-weight: 500;
 }
 
@@ -456,7 +453,7 @@ ul li a:hover {
   margin-top: 12px;
   margin-left: -8px;
   box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .CVPR:hover {
@@ -488,7 +485,7 @@ ul li a:hover {
   padding: 8px 14px;
   border-radius: 6px;
   border: 1px solid var(--border-color);
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   margin: 4px;
 }
 
@@ -562,7 +559,7 @@ hr {
   height: 60px;
   width: auto;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: filter 0.3s ease, transform 0.3s ease;
   filter: grayscale(30%);
 }
 
