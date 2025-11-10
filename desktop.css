@@ -260,7 +260,7 @@ ul li a:hover {
 }
 
 .bio p {
-  color: var(--text-secondary);
+  color: var(--text-primary);
   line-height: 1.8;
   margin-bottom: 16px;
   font-size: 16px;
@@ -292,10 +292,7 @@ ul li a:hover {
 .name-info {
   flex: 1;
   min-width: 200px;
-}
-
-.name-info div {
-  font-size: 36px;
+  font-size: 44px;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.2;
@@ -503,9 +500,9 @@ ul li a:hover {
 
 hr {
   border: none;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
-  margin: 40px 0;
+  height: 1px;
+  background: #f0f0f0;
+  margin: 30px 0;
 }
 
 /* ============================================

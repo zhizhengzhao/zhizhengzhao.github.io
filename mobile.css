@@ -201,7 +201,7 @@ ul li a:active {
 }
 
 .bio p {
-  color: var(--text-secondary);
+  color: var(--text-primary);
   line-height: 1.8;
   margin-bottom: 12px;
   font-size: 15px;
@@ -227,7 +227,7 @@ ul li a:active {
 }
 
 .name-info {
-  font-size: 28px;
+  font-size: 36px;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.2;
@@ -368,9 +368,9 @@ ul li a:active {
 
 hr {
   border: none;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
-  margin: 28px 0;
+  height: 1px;
+  background: #f0f0f0;
+  margin: 20px 0;
 }
 
 /* ============================================
