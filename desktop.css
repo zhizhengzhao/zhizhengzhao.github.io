@@ -438,6 +438,50 @@ ul li a:hover {
   box-shadow: var(--shadow-sm);
 }
 
+/* Award Item Container - Compact version of experience-container */
+.award-item-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 12px 24px;
+  background: var(--bg-primary);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
+
+.award-item-container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+  border-radius: 12px 0 0 12px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+}
+
+.award-item-container:hover::before {
+  transform: scaleY(1);
+}
+
+.award-item-container:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateX(4px);
+  border-color: var(--primary-light);
+}
+
+.award-item-container .text {
+  flex: 1;
+  padding: 0 16px;
+}
+
 /* ============================================
    STATUS BADGES
    ============================================ */
