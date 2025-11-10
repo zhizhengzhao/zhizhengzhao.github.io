@@ -201,7 +201,7 @@ ul li a:active {
 }
 
 .bio p {
-  color: var(--text-primary);
+  color: #000000;
   line-height: 1.8;
   margin-bottom: 12px;
   font-size: 15px;
@@ -227,7 +227,7 @@ ul li a:active {
 }
 
 .name-info {
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.2;

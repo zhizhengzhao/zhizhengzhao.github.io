@@ -19,11 +19,11 @@ This is a modern, professional personal homepage featuring:
 
 ✨ **Modern Design System** - Unified color scheme and component design
 🎯 **Responsive Layout** - Optimized for desktop, tablet, and mobile devices
-📝 **Blog System** - Easy-to-manage blog platform with article management
+📚 **Academic Focus** - Dedicated sections for Education, Publications, Blog, and Research
 🎨 **Interactive Elements** - Smooth animations and transitions
 📱 **Mobile-First Approach** - Touch-friendly interface
 
-**Latest Update**: November 10, 2025 - Complete design system overhaul with modern aesthetics.
+**Latest Update**: November 10, 2025 - Complete structural reorganization with 4-section layout (Education, Publications, Blog, Research).
 
 ---
 
@@ -32,17 +32,9 @@ This is a modern, professional personal homepage featuring:
 ```
 homepage/
 ├── index.html                     # Main homepage
-├── blog.html                      # Blog listing page
 ├── desktop.css                    # Desktop styles (modern design system)
 ├── mobile.css                     # Mobile responsive styles
 ├── README.md                      # This file
-├── BLOG_GUIDE.md                  # Blog system user guide (Chinese)
-├── DESIGN_UPGRADE.md              # Design upgrade report (Chinese)
-│
-├── blog/                          # Blog articles directory
-│   ├── 001-欢迎来到我的博客.html          # Welcome article
-│   ├── 002-链式思维研究.html              # CoT research article
-│   └── 003-暗物质探测.html                # Dark matter detection article
 │
 ├── assets/                        # Project assets (used in website)
 │   ├── images/
@@ -50,11 +42,8 @@ homepage/
 │   │   ├── logos/                 # Institution logos
 │   │   ├── research/              # Research images
 │   │   └── social/                # Social media assets
-│   ├── documents/                 # PDF documents (CV, transcripts)
-│   ├── favicon/                   # Website favicons
-│   └── blog-assets/               # Blog-specific assets
-│       ├── thumbnails/            # Article thumbnails (optional)
-│       └── styles/                # Blog custom styles (optional)
+│   ├── documents/                 # PDF documents (CV, transcripts, blog)
+│   └── favicon/                   # Website favicons
 │
 └── archive/                       # Archived/unused files
     ├── unused-images/             # Old image versions
@@ -131,139 +120,48 @@ All colors and spacing are defined as CSS variables in the `:root` block:
 
 ---
 
-## Blog System
+## Homepage Sections
 
-### Quick Start
+### Main Navigation Structure
 
-**Access the Blog**
-- Blog listing: Visit `blog.html`
-- Individual articles: Click blog cards
-- From homepage: Click "📝 Blog" in navigation
+The homepage is organized into 5 main sections:
 
-### Adding New Articles
+1. **About** (#Top) - Personal introduction and contact information
+2. **Education** (#Education) - University background and visiting experiences
+3. **Publications** (#Publications) - Academic papers and research work
+4. **Blog** (#Blog) - Blog and notes links (PDF-based)
+5. **Research** (#Research) - Current research areas and interests
 
-#### Method 1: Copy Existing Template
+### About Section
+- Profile photo and basic introduction
+- Contact links (Email, CV, Transcript, WeChat)
 
-1. Copy `blog/001-欢迎来到我的博客.html`
-2. Rename to `blog/XXX-your-title.html`
-3. Edit content
-4. Add entry to `blogPosts` array in `blog.html`
+### Education Section
+- **Bachelor's Degree**: Peking University (2022-Present)
+- **Visiting**: Shenzhen International Quantum Academy
+  - Subsection showing visiting experiences
 
-#### Method 2: Use Article Template
+### Publications Section
+- Research papers and work
+- Includes:
+  - CVPR 2025: Chain-of-Thought in Image Generation (PARM)
+  - In Preparation: Dark Matter Detection with Muons (PKμ)
+- Each paper includes authors, abstract, and links
 
+### Blog Section
+- Links to blog/notes PDF file
+- Customize by updating the link in `index.html` line 229:
 ```html
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Your Article Title - Zhizheng Zhao</title>
-  <link rel="shortcut icon" href="../assets/favicon/android-chrome-512x512.png">
-  <link rel="stylesheet" href="../desktop.css" media="screen and (min-width: 601px)">
-  <link rel="stylesheet" href="../mobile.css" media="screen and (max-width: 600px)">
-
-  <style>
-    /* Include article styles from existing articles */
-    :root { /* Design system variables */ }
-    .article-container { /* ... */ }
-    /* ... more styles ... */
-  </style>
-</head>
-<body>
-  <div class="article-container">
-    <div class="article-header">
-      <h1 class="article-title">Your Title</h1>
-      <div class="article-meta">
-        <span>📅 2025-11-15</span>
-        <span>✍️ Zhizheng Zhao</span>
-        <span>🏷️ Category</span>
-      </div>
-      <div class="tags">
-        <span class="tag">tag1</span>
-        <span class="tag">tag2</span>
-      </div>
-    </div>
-
-    <div class="article-content">
-      <h2>Section Title</h2>
-      <p>Your content here...</p>
-    </div>
-
-    <div class="article-footer">
-      <a href="../blog.html" class="back-link">← Back to Blog</a>
-    </div>
-  </div>
-</body>
-</html>
+<a href="assets/documents/cv.pdf" target="_blank">[My Blog & Notes]</a>
 ```
 
-### Managing Blog Posts
-
-Edit the `blogPosts` array in `blog.html`:
-
-```javascript
-const blogPosts = [
-  {
-    id: 1,                          // Unique ID (increment)
-    title: "Article Title",
-    date: "2025-11-15",             // YYYY-MM-DD format
-    category: "Technology",         // Category name
-    excerpt: "Brief summary...",
-    tags: ["tag1", "tag2"],         // 3-5 tags per article
-    url: "blog/001-your-title.html" // File path
-  },
-  // ... more articles
-];
-```
-
-### Article Categories
-
-Recommended categories:
-- **Technology** - Deep learning, AI, programming
-- **Physics** - Dark matter, particle physics
-- **Research** - Research progress, paper sharing
-- **Personal** - Learning insights, life reflections
-- **Notes** - Study notes, tutorials
-
-### Content Formatting
-
-**Headings**
-```html
-<h2>Section Title (Main sections)</h2>
-<h3>Subsection Title</h3>
-```
-
-**Text Elements**
-```html
-<p>Regular paragraph</p>
-<ul><li>Unordered list</li></ul>
-<ol><li>Ordered list</li></ol>
-<blockquote>Quotation</blockquote>
-<code>Inline code</code>
-<pre><code>Code block</code></pre>
-```
-
-### FAQ - Blog Management
-
-**Q: How do I delete an article?**
-- Delete the corresponding `.html` file
-- Remove entry from `blogPosts` array in `blog.html`
-
-**Q: How do I change article order?**
-- Reorder elements in the `blogPosts` array
-- New articles typically go at the beginning
-
-**Q: How do I modify blog styles?**
-- Edit `<style>` section in `blog.html`
-- Or edit styles in individual article HTML files
-
-**Q: Can I add comments?**
-- Currently a static site
-- Integrate third-party services like Disqus or Utterances for comments
-
-**Q: How do I add article thumbnails?**
-- Save images to `assets/blog-assets/thumbnails/`
-- Add `thumbnail` field to `blogPosts` entry
-- Modify blog card HTML to display thumbnail
+### Research Section
+- Overview of active research areas
+- Covers:
+  - Chain-of-Thought in Image Generation
+  - Dark Matter Detection
+  - Large Model Reasoning
+- References Publications section for detailed papers
 
 ---
 
@@ -322,38 +220,48 @@ Recommended categories:
    - Open `index.html` in your browser
    - Test responsive design with browser DevTools
 
-2. **Add Content**
-   - Edit personal information in `index.html`
+2. **Edit Content**
+   - Update personal information in `index.html`
    - Replace profile image at `assets/images/profile/zzz.png`
    - Update logos in `assets/images/logos/`
+   - Edit research images in `assets/images/research/`
 
-3. **Start Blogging**
-   - Copy article template from `blog/001-*`
-   - Create new article files
-   - Add entries to `blogPosts` array
+3. **Update Publications**
+   - Edit paper links and details in the Publications section
+   - Add new papers by copying the paper-container structure
+   - Update author names and abstracts as needed
 
-4. **Customize Styling**
+4. **Configure Blog Section**
+   - Update the PDF link in Blog section (line 229):
+     ```html
+     <a href="assets/documents/YOUR-BLOG-FILE.pdf" target="_blank">[My Blog & Notes]</a>
+     ```
+   - Store your blog PDF in `assets/documents/`
+
+5. **Customize Styling**
    - Edit CSS variables in `:root` blocks
    - Modify values in `desktop.css` and `mobile.css`
    - Changes apply site-wide
 
 ### Tips
 
-1. **Date Format**: Always use `YYYY-MM-DD` for correct sorting
+1. **Content Updates**: Edit HTML directly in `index.html`
 2. **Image Optimization**: Use optimized images for faster loading
 3. **SEO**: Fill in meta descriptions and tags
 4. **Responsive Testing**: Test on multiple device sizes
 5. **Performance**: Keep animations smooth with CSS transforms
+6. **PDF Organization**: Keep blog PDFs in `assets/documents/` directory
 
 ---
 
 ## Project Statistics
 
-- **Total Files**: 20+ HTML/CSS files
-- **Articles**: 3 sample articles (expandable)
-- **Asset Categories**: 6 organized directories
+- **Core Files**: 3 (index.html, desktop.css, mobile.css)
+- **Total Lines of Code**: 1000+ (HTML + CSS)
+- **Asset Categories**: 4 organized directories
 - **CSS Variables**: 15+ design system variables
 - **Mobile Breakpoints**: Optimized for 4+ screen sizes
+- **Pages**: Single-page homepage with smooth navigation
 
 ---
 
@@ -500,24 +408,40 @@ Optimized breakpoints:
 
 ## Quick Reference
 
-### Key URLs
-- Homepage: `/index.html`
-- Blog List: `/blog.html`
-- Blog Article: `/blog/XXX-title.html`
+### Key URLs & Navigation
+- **Homepage**: `/index.html`
+- **About Section**: `index.html#Top`
+- **Education Section**: `index.html#Education`
+- **Publications Section**: `index.html#Publications`
+- **Blog Section**: `index.html#Blog`
+- **Research Section**: `index.html#Research`
+
+### Editing Quick Tips
+
+**Edit Section Content**
+- All content in `index.html` between section `<section id="...">` tags
+
+**Update Paper Links**
+- Find paper in Publications section
+- Update the `href` in the link tag
+
+**Change Blog PDF Link**
+- Find Blog section (around line 229)
+- Update: `<a href="assets/documents/FILE.pdf">`
 
 ### CSS Variable Usage
 ```css
 /* Use in your custom styles */
-color: var(--primary-color);
-box-shadow: var(--shadow-lg);
-background: var(--bg-secondary);
+color: var(--primary-color);        /* Blue #2563eb */
+box-shadow: var(--shadow-lg);       /* Large shadow */
+background: var(--bg-secondary);    /* Light gray #f9fafb */
 ```
 
-### JavaScript Hooks
+### JavaScript Features
 ```javascript
-// Smooth scroll on navigation links
-// Auto-loads blog posts from array
-// Google Analytics auto-integrated
+// Smooth scroll navigation (auto-enabled)
+// Google Analytics integration (auto-enabled)
+// Responsive menu for mobile/desktop (auto-enabled)
 ```
 
 ---
@@ -525,36 +449,48 @@ background: var(--bg-secondary);
 ## Support & Resources
 
 **Documentation Files:**
-- `README.md` - This file (English overview)
-- `BLOG_GUIDE.md` - Blog system detailed guide (Chinese)
-- `DESIGN_UPGRADE.md` - Design system documentation (Chinese)
+- `README.md` - This file (English comprehensive guide)
 
-**Related Files:**
-- `desktop.css` - Desktop styling with design system
-- `mobile.css` - Mobile responsive styling
-- `index.html` - Homepage source code
-- `blog.html` - Blog listing source code
+**Core Source Files:**
+- `index.html` - Homepage with all sections
+- `desktop.css` - Desktop styling (1920px+)
+- `mobile.css` - Mobile responsive styling (≤600px)
+
+**Asset Directories:**
+- `assets/images/` - Logos, photos, research images
+- `assets/documents/` - PDFs (CV, transcripts, blog)
+- `assets/favicon/` - Browser icons
+- `archive/` - Backup files
 
 ---
 
 ## Project Status
 
 ✅ **Completed**
-- Modern design system
+- Modern design system with CSS variables
 - Responsive layout (mobile, tablet, desktop)
-- Blog system with 3 sample articles
-- Asset organization
-- Design documentation
+- 5-section homepage (About, Education, Publications, Blog, Research)
+- Asset organization in `assets/` and `archive/`
+- Comprehensive documentation
+- Smooth navigation and animations
+
+✨ **Latest Restructuring** (November 10, 2025)
+- Reorganized navigation to 5 main sections
+- Moved papers to dedicated Publications section
+- Added Visiting subsection to Education
+- Integrated Blog as inline section with PDF link
+- Removed separate blog.html system
+- Updated CSS styling for consistency
 
 📋 **Maintained by**
 - Claude Code AI
 - Last Updated: November 10, 2025
 
-🎯 **Future Vision**
-- Enhanced content management
-- Advanced analytics
-- Community features
-- Extended functionality
+🎯 **Future Enhancements**
+- Additional research papers
+- Blog PDF content expansion
+- Dark mode toggle (optional)
+- Enhanced analytics
 
 ---
 
@@ -579,7 +515,7 @@ This homepage was created for **Zhizheng Zhao**, an undergraduate student at Pek
 ---
 
 **Last Updated**: November 10, 2025
-**Version**: 2.0 (Design System Overhaul)
+**Version**: 3.0 (Structural Reorganization)
 **Status**: ✨ Production Ready
 
-Enjoy your beautiful, modern homepage! ✨
+Your academic homepage is now fully structured with dedicated sections for Education, Publications, Blog, and Research. Enjoy your beautiful, modern homepage! ✨

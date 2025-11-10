@@ -260,7 +260,7 @@ ul li a:hover {
 }
 
 .bio p {
-  color: var(--text-primary);
+  color: #000000;
   line-height: 1.8;
   margin-bottom: 16px;
   font-size: 16px;
@@ -292,7 +292,7 @@ ul li a:hover {
 .name-info {
   flex: 1;
   min-width: 200px;
-  font-size: 44px;
+  font-size: 60px;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.2;
