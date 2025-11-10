@@ -276,11 +276,11 @@ ul li a:hover {
 }
 
 .profile-img {
-  width: 160px;
-  height: 160px;
+  width: 192px;
+  height: 192px;
   border-radius: 16px;
   object-fit: cover;
-  object-position: center 0%;
+  object-position: center 40%;
   box-shadow: var(--shadow-lg);
   border: 3px solid var(--primary-light);
   transition: transform 0.3s ease;
@@ -293,7 +293,7 @@ ul li a:hover {
 .name-info {
   flex: 1;
   min-width: 200px;
-  font-size: 60px;
+  font-size: 48px;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.2;
@@ -421,15 +421,6 @@ ul li a:hover {
   border-color: var(--primary-light);
 }
 
-.experience-container.no-hover:hover {
-  box-shadow: var(--shadow-sm);
-  transform: none;
-  border-color: var(--border-color);
-}
-
-.experience-container.no-hover:hover::before {
-  transform: scaleY(0);
-}
 
 .experience-container .image {
   flex-shrink: 0;
@@ -438,6 +429,7 @@ ul li a:hover {
 
 .experience-container .text {
   flex: 1;
+  padding: 0 16px;
 }
 
 .experience-container img {

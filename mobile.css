@@ -218,17 +218,17 @@ ul li a:active {
 }
 
 .profile-img {
-  width: 140px;
-  height: 140px;
+  width: 168px;
+  height: 168px;
   border-radius: 12px;
   object-fit: cover;
-  object-position: center 0%;
+  object-position: center 40%;
   box-shadow: var(--shadow-lg);
   border: 3px solid var(--primary-light);
 }
 
 .name-info {
-  font-size: 48px;
+  font-size: 38.4px;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.2;
@@ -316,6 +316,7 @@ ul li a:active {
 
 .experience-container .text {
   width: 100%;
+  padding: 0 8px;
 }
 
 .experience-container img {
