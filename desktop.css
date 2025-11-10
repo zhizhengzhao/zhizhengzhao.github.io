@@ -280,6 +280,7 @@ ul li a:hover {
   height: 160px;
   border-radius: 16px;
   object-fit: cover;
+  object-position: center 35%;
   box-shadow: var(--shadow-lg);
   border: 3px solid var(--primary-light);
   transition: transform 0.3s ease;

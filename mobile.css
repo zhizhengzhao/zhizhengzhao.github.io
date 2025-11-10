@@ -222,6 +222,7 @@ ul li a:active {
   height: 140px;
   border-radius: 12px;
   object-fit: cover;
+  object-position: center 35%;
   box-shadow: var(--shadow-lg);
   border: 3px solid var(--primary-light);
 }
