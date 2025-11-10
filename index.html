@@ -1,298 +1,149 @@
 <!DOCTYPE HTML>
-
 <html lang="en">
 
 <head>
-
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4HCHY9LYJ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-R4HCHY9LYJ');
   </script>
 
-
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Zhizheng Zhao 赵志政</title>
-  <meta name="author" content="ZhizhengZhao">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Zhizheng Zhao">
   <meta name="description" content="Zhizheng Zhao's Homepage">
 
-  <!--     <meta name="google-site-verification" content="vJ_pZMsbGuDnzTd88nb-RQcqes9CnJjFV7_vN4YtXwU" /> -->
+  <title>Zhizheng Zhao 赵志政</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/favicon/android-chrome-512x512.png" type="image/x-icon">
 
-  <!--     这里是一个网站的个性小图标，后面可以改一下 -->
-
-  <link rel="shortcut icon" href="pic/favicon/android-chrome-512x512.png" type="image/x-icon">
-
-  <!--     定义加载来源，不同屏幕大小，不同用途的时候有不同的加载方式 -->
-
+  <!-- Responsive stylesheets -->
   <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 601px)">
   <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 600px)">
   <link rel="stylesheet" href="desktop.css" media="print">
 </head>
 
-
-<!--   不同的设备使用不同的导航栏 -->
-
-
-
 <body>
+  <!-- Mobile Navigation -->
   <div class="mobile-component">
     <ul>
       <li><a href="#Top"><strong>Top👆</strong></a></li>&nbsp;·&nbsp;
       <li><a href="#Education">📖</a></li>&nbsp;·&nbsp;
       <li><a href="#Research">💡</a></li>&nbsp;·&nbsp;
-      <!-- <li><a href="#Projects">📂</a></li>&nbsp;·&nbsp;
-      <li><a href="#Awards">🏆</a></li>&nbsp;·&nbsp; -->
-      <li><a href="#Experiences">🌍</a></li>
+      <li><a href="#Experiences">🌍</a></li>&nbsp;·&nbsp;
+      <li><a href="blog.html">📝</a></li>
     </ul>
   </div>
 
+  <!-- Desktop Navigation -->
   <div class="desktop-component">
     <ul>
       <li><a href="#Top"><strong>🟫About</strong></a></li>&nbsp;·&nbsp;
       <li><a href="#Education"><strong>🟩Education</strong></a></li>&nbsp;·&nbsp;
       <li><a href="#Research"><strong>🟨Research</strong></a></li>&nbsp;·&nbsp;
-      <!-- <li><a href="#Projects"><strong>🟧Projects</strong></a></li>&nbsp;·&nbsp;
-      <li><a href="#Awards"><strong>🟪Awards</strong></a></li>&nbsp;·&nbsp; -->
-      <li><a href="#Experiences"><strong>🟦Experiences</strong></a></li>
+      <li><a href="#Experiences"><strong>🟦Experiences</strong></a></li>&nbsp;·&nbsp;
+      <li><a href="blog.html"><strong>📝Blog</strong></a></li>
     </ul>
   </div>
 
+  <!-- Smooth scroll functionality -->
   <script>
-    // Get the height of the mobile and desktop navigation bars
     var navbarHeightMobile = document.querySelector('.mobile-component ul').offsetHeight;
     var navbarHeightDesktop = document.querySelector('.desktop-component ul').offsetHeight;
 
-    // Add click event listeners to navigation links
     document.querySelectorAll('.mobile-component ul li a, .desktop-component ul li a, .a').forEach(function (anchor) {
       anchor.addEventListener('click', function (event) {
-        event.preventDefault(); // Prevent the default navigation behavior
+        event.preventDefault();
 
-        var targetId = this.getAttribute('href'); // Get the target section's ID from the link's href
-        var targetElement = document.querySelector(targetId); // Find the target element using its ID
-        var targetOffsetTop = targetElement.offsetTop; // Get the target's top offset relative to the document
+        var targetId = this.getAttribute('href');
+        var targetElement = document.querySelector(targetId);
+        var targetOffsetTop = targetElement.offsetTop;
 
-        // Calculate scroll position considering the navigation bar height to avoid overlap
         var navbarHeight = (window.innerWidth < 768) ? navbarHeightMobile : navbarHeightDesktop;
         window.scrollTo({
           top: targetOffsetTop - navbarHeight,
-          behavior: 'smooth' // Smooth scroll to the target position
+          behavior: 'smooth'
         });
       });
     });
   </script>
 
-  <section id="Top"></section>
-  <table style="max-width:900px;margin:auto;padding-top: 30px;">
+  <!-- Main Content Container -->
+  <table class="main-container">
     <tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
+      <tr>
+        <td>
+          <!-- ============ ABOUT SECTION ============ -->
+          <section id="Top"></section>
           <div class="bio">
             <div class="face-name">
-              <!--  主页照片 -->
-              <img src="pic/zzz.png" alt="profile photo" class="profile-img">
+              <img src="assets/images/profile/zzz.png" alt="profile photo" class="profile-img">
               <div class="name-info">
-                赵志政 <br>
+                赵志政<br>
                 Zhizheng Zhao
               </div>
             </div>
             <br>
             <p>
               Hi, I'm Zhizheng Zhao, an undergraduate student (junior) at the School of Physics, Peking University.
-              <!-- Under the guidance of <a href="https://orcid.org/0009-0005-1319-550X" target="_blank">Professor Qite
-                Li</a>, I am researching the use of muons to detect dark matter, focusing on improving detection
-              sensitivity and precision.
-              <br>
-
-              I'm also passionate about artificial intelligence and used to work with <a
-                href="https://zrrskywalker.github.io/" target="_blank">Renrui Zhang</a>, a PhD student at the Chinese
-              University of Hong Kong, to explore the application of contrastive optimization techniques (COT) in
-              text-to-image (T2I) tasks. -->
             </p>
             <p>
-              Access more info / Contack me through the following links:
+              Access more info / Contact me through the following links:
             </p>
             <div class="links">
-              <!--   联系方式 -->
-              <a href="cv.pdf" target="_blank">CV</a> &nbsp;·&nbsp;
-              <a href="pic/Transcript.pdf" target="_blank">Transcript</a> &nbsp;·&nbsp;
-              <!--  其他联系方式
-              <a href="https://www.zhihu.com/people/homybush">Zhihu</a> &nbsp;·&nbsp;
-              <a href="https://scholar.google.com/citations?user=gADoQmcAAAAJ&amp;hl=en">Google Scholar</a> &nbsp;·&nbsp; -->
+              <a href="assets/documents/cv.pdf" target="_blank">CV</a> &nbsp;·&nbsp;
+              <a href="assets/documents/Transcript.pdf" target="_blank">Transcript</a> &nbsp;·&nbsp;
               <a href="mailto:zhizhengzhao@outlook.com">Email</a> &nbsp;·&nbsp;
-              <a href="pic/wechat.JPG" target="_blank">WeChat</a>
+              <a href="assets/images/social/wechat.JPG" target="_blank">WeChat</a>
             </div>
           </div>
 
-
-          <!-- 教育 -->
-
-
           <hr>
+
+          <!-- ============ EDUCATION SECTION ============ -->
           <section id="Education"></section>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <h2><strong>Education📖</strong></h2>
+          <h2><strong>Education 📖</strong></h2>
 
-                  <div class="experience-container">
-                    <div class="image">
-                      <img src='pic/logo/pku.png'>
-                    </div>
-                    <div class="text">
-                      <span class="papertitle">Peking University</span><br>
-                      Undergraduate Student, 2022 - Present
-                      <br>
-                      <i>Focus: Physics, Artificial Intelligence</i>
-
-                    </div>
-                  </div>
-
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-
-
-          <hr>
-
-
-          <!-- news -->
-
-
-          <!-- <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <h2><strong>News📰</strong></h2>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;padding:20px">
-            <tbody> -->
-          <!-- 这里是一些news，可以参考一下 -->
-          <!--               <tr>
-                <td class="date">2024-10-31 💼</td>
-                <td>Glad to serve as a visiting student at Westlake University, advised by <a href="https://scholar.google.com/citations?user=HmylMfcAAAAJ&hl=en">Yandong Wen.</a></td>
-              </tr>
-              <tr>
-                <td class="date">2024-10-25 💼</td>
-                <td>Glad to receive an intern offer from Shanghai AI Lab! See you in Shanghai!</td>
-              </tr>
-              <tr>
-                  <td class="date">2024-06-26 🎓</td>
-                  <td>PhD offer from CUHK!</td>
-              </tr>
-              <tr>
-                  <td class="date">2024-06-14 🚀</td>
-                  <td>Mask4Align now released!</td>
-              </tr>
-              <tr>
-                  <td class="date">2025-11-22 📄</td>
-                  <td>My first paper accepted by CVPR 2024! See you in Seattle!</td>
-              </tr> -->
-          <!-- <tr>
-                <td class="date">2024-01-10 🌐</td>
-                <td>Visited <a href="https://siqse.sustech.edu.cn/en" target="_blank">Institute for Quantum Science and
-                    Engineering</a> for academic exchange and learning.</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <hr> -->
-
-
-
-          <!-- 研究部分 -->
-
-
-
-          <section id="Research"></section>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <h2><strong>Research 💡</strong></h2>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-
-          <!-- 
-          <div class="paper-container">
+          <div class="experience-container">
             <div class="image">
-              <img src='images/M4A.png' alt="Mask4Align">
+              <img src="assets/images/logos/pku.png" alt="Peking University Logo">
             </div>
             <div class="text">
-              <span class="papertitle">Mask4Align: Aligned Entity Prompting with Color Masks for Multi-Entity
-                Localization Problems</span><br>
-
-              <p>
-                <u><strong>Haoquan Zhang</strong></u>,
-                Ronggang Huang,
-                Yi Xie,
-                <a href="https://scholar.google.com/citations?user=cC_WhWkAAAAJ">Huaidong Zhang</a>
-              </p>
-
-              <p>
-                Pretrained VLMs excel in accurately recognizing and precisely localizing entities within VQA tasks.
-                However, in visual scenes with multiple entities, textual descriptions struggle to distinguish the
-                entities from the same category effectively. Consequently, the existing VQA dataset cannot adequately
-                cover scenarios involving multiple entities. Therefore, we introduce a Mask for Align (Mask4Align)
-                method to determine the entity's position in the given image that best matches the user input question.
-                This method incorporates colored masks into the image, enabling the VQA model to handle discrimination
-                and localization challenges associated with multiple entities.
-              </p>
-
-              <p>
-                <strong class="buttom"><a
-                    href="https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Mask4Align_Aligned_Entity_Prompting_with_Color_Masks_for_Multi-Entity_Localization_CVPR_2024_paper.pdf">[Paper]</a></strong>
-                <strong class="buttom"><a href="https://www.zhihu.com/question/627841035/answer/3286130863">[Submission
-                    Journey]</a></strong>
-              </p>
-
-              <div class="CVPR">
-                <strong>CVPR 2024</strong>
-              </div>
+              <span class="papertitle">Peking University</span><br>
+              Undergraduate Student, 2022 - Present<br>
+              <i>Focus: Physics, Artificial Intelligence</i>
             </div>
-          </div> -->
+          </div>
 
-          <!-- parm -->
+          <hr>
 
+          <!-- ============ RESEARCH SECTION ============ -->
+          <section id="Research"></section>
+          <h2><strong>Research 💡</strong></h2>
+
+          <!-- Paper 1: PARM -->
           <div class="paper-container">
             <div class="image">
-              <img src='pic/research/parm2.png' alt="parm">
+              <img src="assets/images/research/parm2.png" alt="PARM Research">
             </div>
             <div class="text">
               <span class="papertitle">Let's Verify and Reinforce Image Generation Step by Step</span><br>
-
               <p>
                 Renrui Zhang*,
                 Chengzhuo Tong*,
-                <u><strong>Zhizheng Zhao</u>*</strong>,
+                <u><strong>Zhizheng Zhao</strong></u>*,
                 Ziyu Guo*,
                 Huaidong Zhang,
                 Manyuan Zhang,
                 Peng Gao,
                 Hongsheng Li
                 <br>
-                <em style="color: rgb(160, 160, 160);font-size: smaller;">* Co-first authorship</em>
+                <em style="color: rgb(160, 160, 160); font-size: smaller;">* Co-first authorship</em>
               </p>
-
               <p>
                 Chain-of-Thought (CoT) reasoning has been effective in large models for complex tasks but is
                 underexplored in image generation. We introduce a study on applying CoT to autoregressive image
@@ -303,37 +154,25 @@
                 improvement on GenEval, surpassing Stable Diffusion 3 by +15%. This work offers new insights into CoT
                 and image generation.
               </p>
-
               <p>
                 <strong class="buttom">
                   <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Zhang_Lets_Verify_and_Reinforce_Image_Generation_Step_by_Step_CVPR_2025_paper.pdf"
                     target="_blank">[Paper]</a>
                 </strong>
-                <!-- <strong class="buttom"><a href="https://github.com/ZiyuGuo99/Image-Generation-CoT"
-                    target="_blank">[Code]</a></strong> -->
-                <!-- <strong class="buttom"><a href="https://cvpr.thecvf.com/virtual/2025/poster/32492" target="_blank">[CVPR
-                    LINK]</a></strong> -->
               </p>
-
               <div class="CVPR">
                 <strong>CVPR 2025</strong>
               </div>
             </div>
           </div>
 
-          <!-- pkmu -->
-
+          <!-- Paper 2: PKμ -->
           <div class="paper-container">
             <div class="image">
-              <img src='pic/research/pkmu.png' alt="pkmu">
+              <img src="assets/images/research/pkmu.png" alt="PKμ Research">
             </div>
             <div class="text">
-              <span class="papertitle">PKμ-Probing and Knocking with Muons</span><br>
-
-              <br>
-
-              </p>
-
+              <span class="papertitle">PKμ - Probing and Knocking with Muons</span><br>
               <p>
                 On the cosmic scale, the discrepancy between theory and observation indirectly hints at the existence of
                 dark matter, yet dark matter has never been directly observed in the laboratory. Due to the penetrating
@@ -344,334 +183,59 @@
                 extraction and analysis algorithms, we aim to enhance the sensitivity of dark matter detection, offering
                 a new possibility for its direct observation.
               </p>
-
               <p>
-                <strong class="buttom">[Paper]</a>
-                </strong>
                 <strong class="buttom">
                   <a href="https://indico.impcas.ac.cn/event/63/contributions/442/attachments/133/497/02_%E6%9D%8E%E5%A5%87%E7%89%B9-PKMu%E7%BC%AA%E5%AD%90%E6%95%A3%E5%B0%84%E5%AE%9E%E9%AA%8C%E7%9A%84%E5%88%9D%E6%AD%A5%E8%BF%9B%E5%B1%95%E4%B8%8E%E5%B1%95%E6%9C%9B-240826.pdf"
                     target="_blank">[Slides]</a>
                 </strong>
               </p>
-
               <div class="insub">
                 <strong>In Preparation</strong>
               </div>
             </div>
           </div>
 
-          <!-- 项目部分 -->
+          <hr>
 
-          <!-- <hr>
-          <section id="Projects"></section>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <h2><strong>Projects 📂</strong></h2>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <!-- ============ EXPERIENCES SECTION ============ -->
+          <section id="Experiences"></section>
+          <h2><strong>Experiences 🌍</strong></h2>
 
-          <div class="paper-container">
+          <div class="experience-container">
             <div class="image">
-              <img src='images/BEM2023CONTEST.png' alt="BEM 2023 Contest">
+              <img src="assets/images/logos/sz.png" alt="Shenzhen Quantum Academy Logo">
             </div>
             <div class="text">
-              <span class="papertitle">Design of Auxiliary Diagnosis Algorithm for Schizophrenia Based on Feature Fusion
-                of EEG and ECG</span><br>
-              <strong><a href="NBMEC_2023/B030079.pdf">[Entry (Chinese)]</a></strong>
-              <p></p>
-              <em>Entry</em>, 2023, National Biomedical Engineering Innovation Design Competition for College Students
-              <br>
-              <p></p>
-              <p>
-                Calculated brain functional network features, heart rate variability features and heart-brain coupling
-                features to build machine learning models for automatic diagnosis; Deep learning models using ResNet
-                were built based on original EEG and ECG also.
-              </p>
-              <strong>Second Prize. (6%)</strong>
+              <a href="https://sziqa.ac.cn/" class="papertitle-link" target="_blank">
+                <span class="papertitle">Shenzhen International Quantum Academy</span>
+              </a><br>
+              Visiting Student
             </div>
           </div>
 
-          <div class="paper-container">
-            <div class="image">
-              <img src='images/gunmayhem_logo.png'>
-            </div>
-            <div class="text">
-              <span class="papertitle">Perfect GunMayhem Remake: A 2D Shooting PVP Game Based on Cocos2d-x</span><br>
-              <strong><a href="https://github.com/Randonee1/Advanced-Language-Programming">[Github]</a></strong> ·
-              <strong><a href="GunMayhem/gunMayhem.html">[Project Page]</a></strong> ·
-              <strong><a href="https://gun-mayhem-2.github.io/">[Original Game]</a></strong> ·
-              <strong><a href="/GunMayhem/gunmayhem_GameArts.zip">[Art Assets (.ai)]</a></strong>
-              <br><br>
-              <em>Course design</em>, 2022, Advanced Language Programming (C++)
-              <br>
-              <p>
-                GunMayhem Remake is a project independently completed by our team members, covering all aspects,
-                including source code, game artwork, and music assets. You can play our <a
-                  href="https://github.com/Randonee1/Advanced-Language-Programming/tree/main/dist">executable file</a>.
-              </p>
-              <p>
-                <span style="color: rgb(149, 63, 184);">Shoutout to <a href="https://www.thekevingu.com/">Kevin Gu</a>
-                  for creating this incredible game!</span>
-              </p>
-              <strong>Final Score: 99, 4.0/4.0. (1%)</strong>
-            </div>
-          </div> -->
-
-
-          <!-- 得奖部分 -->
-
-
-          <!-- <hr>
-          <section id="Awards"></section>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <h2><strong>Awards 🏆</strong></h2>
-
-                  <p><strong>TaiHu Innovation Prize (1%)</strong>,
-                    <br>Highest scholarship, which awarded by the Wuxi governments, 2024
-                  </p>
-
-                  <p><strong>Second Prize (6%), <em><span style="color: rgb(43, 155, 142);"> *Medical AI
-                          Track</span></em> </strong>
-                    <br>The National BME lnnovation Design Competition, China Society of Biomedical Engineering, 2023
-                  </p> -->
-
-          <!-- <p><strong>Second Prize (5%)</strong>, 
-                <br>The Taihu Innovation Scholarship, Wuxi city government, 2022</p>
-
-                <p><strong>Third Prize (12%)</strong>, 
-                <br>The SCUT Scholarship, SCUT, 2022</p>
-
-                <p><strong>Third Prize (12%)</strong>, 
-                <br>The Huameng Scholarships, TCL Corporate , 2022</p> -->
-
-          <!-- <p><strong>Meritorious Winner (6%), <em><span style="color: rgb(43, 155, 142);"> *Prior to the release
-                          of ChatGPT </span></em>😏 </strong>
-                    <br>The Interdisciplinary Contest in Modeling (ICM), <a href="https://www.comap.com/">COMAP</a>,
-                    2021
-                  </p>
-
-                </td>
-              </tr>
-            </tbody>
-          </table> -->
-
-
-          <!--   经历 -->
-
           <hr>
 
-
-          <section id="Experiences"></section>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <!-- ============ FOOTER ============ -->
+          <table class="footer-container">
             <tbody>
               <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <h2><strong>Experiences 🌍</strong></h2>
-
-
-                  <div class="experience-container">
-                    <div class="image">
-                      <img src='pic/logo/sz.png'>
-                    </div>
-                    <div class="text">
-                      <a href="https://sziqa.ac.cn/" class="papertitle-link" target="_blank">
-                        <span class="papertitle">Shenzhen International Quantum Academy</span>
-                      </a>
-                      <br>
-                      Visiting Student
-
-
-                    </div>
-                  </div>
-
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-
-          <!--  爱好 -->
-
-          <!-- <hr>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <h3><strong>Misc 🤔</strong></h3>
-
-                <p>· I love anime. Recently I've been watching <a href="https://makeine-anime.com/"><em>Too Many Losing Heroines!</em></a>. </p>
-                <p>· I occasionally make tracks, mainly around focused on EDM.</p>
-  
-              </td>
-            </tr>
-          </tbody></table> -->
-
-
-          <!--  朋友 -->
-
-
-          <!-- <hr>
-          <section id="Friends"></section>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-                <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2><strong>Friends 🤜🤛</strong></h2>
-                  <br>
-                <div class="image-text-container">
-                  <div class="image">
-                      <img src="images/scut_logo.png">
-                  </div>
-
-                  <div class="text">
-                  <table>
-                    <tr>
-                        <td><strong><a href="https://tobyleelsz.github.io/">Shangzhe Li</a></strong></td>
-                        <td>Research Intern @UCSD</td>
-                        <td><em>Reinforcement Learning · physics enthusiast · pilot</em></td>
-                    </tr>
-                    <tr>
-                        <td><strong><a href="https://xinjie-shen.com/">Xinjie Shen</a></strong></td>
-                        <td>Research Intern @Dartmouth</td>
-                        <td><em>Interaction · Graph · Quantitative Finance</em></td>
-                    </tr>
-                    <tr>
-                        <td><strong><a href="https://brandon-liu-jx.github.io/">Jinxiu Liu</a></strong></td>
-                        <td>Research Intern @Stanford</td>
-                        <td><em>4D Dynamic Generation · MLLM</em></td>
-                    </tr>
-                    <tr>
-                        <td><strong><a href="https://troychowzyb.github.io/">Yubin Zhou</a></strong></td>
-                        <td>Research Intern @BrainCo</td>
-                        <td><em>Brain-Computer Interface · Cognitive Neuroscience</em></td>
-                    </tr>
-                  </table>
-                </div>
-                
-                </div>
-
-                <div class="image-text-container">
-                  <div class="image">
-                      <img src="images/NYU.jpg">
-                  </div>
-                  <div class="text">
-                    <table>
-                      <tr>
-                        <td><strong>Junru Liao</strong></td>
-                        <td>Undergraduate @NYU</td>
-                        <td><em>Biomechanics · Cellular Mechanics Response</em></td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-
-                <div class="image-text-container">
-                  <div class="image">
-                      <img src="images/Sun_Yat-sen_University_Logo.png">
-                  </div>
-                  <div class="text">
-                    <h2 style="padding-bottom:10px;">Sun Yat-sen University</h2>
-
-                    <strong>HONG Xuan</strong>
-                     - <em>High-Energy Phenomenology · Particle Physics · Cosmology<br>
-
-                    <strong>FAN Wei</strong>
-                     - <em>Piezoelectricity · Semiconductor · DeviceFabrication<br>
-                  </div>
-                </div>
-
-                </td>
-            </tr>
-            </tbody>
-          </table> -->
-
-
-
-
-          <hr>
-
-
-          <!--   暂时用不到 -->
-
-
-          <!--           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2><strong>Presentaitons 🗣️</strong></h2>
-
-                <div class="paper-container">
-                  <div class="image">
-                    <img src='images/vp.png'>
-                  </div>
-                  <div class="text">
-                    <span class="papertitle">A Brief Intro to <em style="color: rgb(41, 73, 168);">Visual Prompting</em></span><br>
-
-                    <em style="color: rgb(160, 160, 160);font-size: smaller;">* With my friends and mentors @ Shanghai AI Lab</em>
-              
-                    <p>
-                      An introduction to the concept of Visual Prompting, a technique used to enhance the performance of pre-trained Vision-Language models. It references several research papers that delve into different aspects of Visual Prompting.
-                    </p>
-              
-                    <p>
-                      <a href="data/Intro2VisualPrompting.pptx" ><strong class="buttom">[Slides (.pptx)]</strong></a>
-                      <a href="data/Intro2VisualPrompting.pdf" ><strong class="buttom">[Slides (.pdf)]</strong></a>
-                    </p>
-
-                  </div>
-                </div>
-  
-              </td>
-            </tr>
-          </tbody></table> -->
-
-
-
-          <hr>
-
-
-
-          <!-- 结尾 -->
-
-
-
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;padding: 20px;">
-            <tbody>
-              <tr>
-                <td style="padding:0px">
-                  <p style="text-align:center;font-size: large;">
+                <td>
+                  <p style="text-align: center; font-size: large;">
                     <em>Stay inspired and keep exploring!</em>
                     <br><br>
-                    <span style="font-size: medium;color: rgb(143, 143, 143);">© 2025 Zhizheng Zhao&nbsp;&nbsp;</span>
-                    <!-- <br>
-                    Feel free to take the <a href="https://github.com/HaoquanZhang/HaoquanZhang.github.io">resources</a> of this page. -->
-                  </p>
-
+                    <span style="font-size: medium; color: rgb(143, 143, 143);">© 2025 Zhizheng Zhao</span>
                   </p>
                   <div class="logo-container">
-                    <img src="pic/logo/pku.png" alt="PKU Logo">
-                    <!-- <img src="images/gzic.jpg" alt="GZIC"> -->
-                    <!-- <img src="images/smu.jpg" alt="SMU Logo"> -->
-                    <img src="pic/logo/sz.png" alt="quantum Logo">
-                    <!-- <img src="images/pjlab.png" alt="ailab Logo">
-                    <img src="images/westlake.png" alt="ailab Logo"> -->
+                    <img src="assets/images/logos/pku.png" alt="PKU Logo">
+                    <img src="assets/images/logos/sz.png" alt="Quantum Academy Logo">
                   </div>
                 </td>
               </tr>
             </tbody>
           </table>
-
         </td>
       </tr>
+    </tbody>
   </table>
 </body>
 
