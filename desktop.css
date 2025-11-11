@@ -550,8 +550,8 @@ ul li a:hover {
    ============================================ */
 
 .metadata {
-  color: #6b7280;
-  font-size: 14px;
+  color: #6b7280 !important;
+  font-size: 14px !important;
 }
 
 /* ============================================
