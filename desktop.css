@@ -388,7 +388,7 @@ ul li a:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 6px;
+  padding: 6px 28px;
   background: var(--bg-primary);
   border-radius: 12px;
   border: 1px solid var(--border-color);
@@ -434,7 +434,7 @@ ul li a:hover {
 
 .experience-container .text {
   flex: 1;
-  padding: 0 4px;
+  padding: 0 0;
 }
 
 .experience-container .papertitle {
@@ -458,7 +458,7 @@ ul li a:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 3px 6px;
+  padding: 3px 28px;
   background: var(--bg-primary);
   border-radius: 12px;
   border: 1px solid var(--border-color);
@@ -494,7 +494,7 @@ ul li a:hover {
 
 .award-item-container .text {
   flex: 1;
-  padding: 0 4px;
+  padding: 0 0;
 }
 
 .award-item-container .papertitle {
