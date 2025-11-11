@@ -452,8 +452,8 @@ ul li a:hover {
 
 .experience-container .image {
   flex-shrink: 0;
-  width: 69px;
-  height: 69px;
+  width: 62px;
+  height: 62px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -465,7 +465,7 @@ ul li a:hover {
 }
 
 .experience-container .papertitle {
-  font-size: 9 !important;
+  font-size: 1 !important;
   font-weight: 700 !important;
 }
 
@@ -537,7 +537,7 @@ ul li a:hover {
 }
 
 .award-item-container .papertitle {
-  font-size: 9 !important;
+  font-size: 1 !important;
   font-weight: 700 !important;
 }
 
