@@ -384,6 +384,13 @@ ul li a:hover {
   color: inherit;
 }
 
+/* Make the entire experience-container clickable */
+.experience-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .experience-container {
   display: flex;
   align-items: center;
