@@ -438,7 +438,8 @@ ul li a:hover {
 }
 
 .experience-container .papertitle {
-  font-size: 7px;
+  font-size: 5px;
+  font-weight: 400;
 }
 
 .experience-container .text p {
@@ -498,7 +499,8 @@ ul li a:hover {
 }
 
 .award-item-container .papertitle {
-  font-size: 7px;
+  font-size: 5px;
+  font-weight: 400;
 }
 
 .award-item-container .text p {
