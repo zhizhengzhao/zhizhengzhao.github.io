@@ -380,12 +380,12 @@ ul li a:hover {
 .experience-container {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 12px;
+  gap: 8px;
+  padding: 6px;
   background: var(--bg-primary);
   border-radius: 12px;
   border: 1px solid var(--border-color);
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   box-shadow: var(--shadow-sm);
   transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
   position: relative;
@@ -418,8 +418,8 @@ ul li a:hover {
 
 .experience-container .image {
   flex-shrink: 0;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,15 +427,15 @@ ul li a:hover {
 
 .experience-container .text {
   flex: 1;
-  padding: 0 8px;
+  padding: 0 4px;
 }
 
 .experience-container .papertitle {
-  font-size: 13px;
+  font-size: 7px;
 }
 
 .experience-container .text p {
-  font-size: 10px;
+  font-size: 5px;
 }
 
 .experience-container img {
@@ -450,12 +450,12 @@ ul li a:hover {
 .award-item-container {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 6px 12px;
+  gap: 8px;
+  padding: 3px 6px;
   background: var(--bg-primary);
   border-radius: 12px;
   border: 1px solid var(--border-color);
-  margin-bottom: 6px;
+  margin-bottom: 3px;
   box-shadow: var(--shadow-sm);
   transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
   position: relative;
@@ -487,15 +487,15 @@ ul li a:hover {
 
 .award-item-container .text {
   flex: 1;
-  padding: 0 8px;
+  padding: 0 4px;
 }
 
 .award-item-container .papertitle {
-  font-size: 13px;
+  font-size: 7px;
 }
 
 .award-item-container .text p {
-  font-size: 10px;
+  font-size: 5px;
 }
 
 /* ============================================
