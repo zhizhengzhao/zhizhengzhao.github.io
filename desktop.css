@@ -378,21 +378,10 @@ ul li a:hover {
 }
 
 /* Make the entire paper-container clickable */
-.paper-container a {
-  position: relative;
-  z-index: 2;
-  cursor: pointer;
-}
-
-.paper-container a::after {
-  content: '';
-  position: absolute;
-  top: -28px;
-  left: -30px;
-  right: -30px;
-  bottom: -28px;
-  z-index: 1;
-  cursor: pointer;
+.paper-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .experience-container {
