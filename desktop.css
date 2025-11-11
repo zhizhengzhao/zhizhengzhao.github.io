@@ -459,7 +459,7 @@ ul li a:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 3px 28px;
+  padding: 3px 42px;
   background: var(--bg-primary);
   border-radius: 12px;
   border: 1px solid var(--border-color);
