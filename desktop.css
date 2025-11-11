@@ -387,12 +387,12 @@ ul li a:hover {
 .experience-container {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 28px;
+  gap: 12px;
+  padding: 9px 42px;
   background: var(--bg-primary);
   border-radius: 12px;
   border: 1px solid var(--border-color);
-  margin-bottom: 6px;
+  margin-bottom: 9px;
   box-shadow: var(--shadow-sm);
   transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
   position: relative;
@@ -425,8 +425,8 @@ ul li a:hover {
 
 .experience-container .image {
   flex-shrink: 0;
-  width: 25px;
-  height: 25px;
+  width: 38px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -438,12 +438,12 @@ ul li a:hover {
 }
 
 .experience-container .papertitle {
-  font-size: 5px;
+  font-size: 8px;
   font-weight: 400;
 }
 
 .experience-container .text p {
-  font-size: 5px;
+  font-size: 8px;
 }
 
 .experience-container img {
