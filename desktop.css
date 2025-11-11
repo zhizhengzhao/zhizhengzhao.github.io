@@ -429,6 +429,17 @@ ul li a:hover {
   border-color: var(--primary-light);
 }
 
+/* Disable hover effects for Education section */
+.experience-container.no-hover:hover::before {
+  transform: scaleY(0);
+}
+
+.experience-container.no-hover:hover {
+  box-shadow: var(--shadow-sm);
+  transform: none;
+  border-color: var(--border-color);
+}
+
 
 .experience-container .image {
   flex-shrink: 0;
@@ -498,6 +509,17 @@ ul li a:hover {
   box-shadow: var(--shadow-lg);
   transform: translateX(4px);
   border-color: var(--primary-light);
+}
+
+/* Disable hover effects for Awards section */
+.award-item-container.no-hover:hover::before {
+  transform: scaleY(0);
+}
+
+.award-item-container.no-hover:hover {
+  box-shadow: var(--shadow-sm);
+  transform: none;
+  border-color: var(--border-color);
 }
 
 .award-item-container .text {
