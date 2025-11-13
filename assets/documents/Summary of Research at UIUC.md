@@ -1,6 +1,6 @@
 # Summary of Research at UIUC
 
-**Author:** Zhizheng Zhao
+**Author: Zhizheng Zhao**
 
 ---
 
