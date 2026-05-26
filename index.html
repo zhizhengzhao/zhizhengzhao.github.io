@@ -18,296 +18,172 @@
 
   <title>Zhizheng Zhao 赵志政</title>
 
-  <!-- Favicon -->
   <link rel="shortcut icon" href="assets/favicon/android-chrome-512x512.png" type="image/x-icon">
 
-  <!-- Responsive stylesheets -->
   <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 601px)">
   <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 600px)">
   <link rel="stylesheet" href="desktop.css" media="print">
 </head>
 
 <body>
-  <!-- Mobile Navigation -->
-  <div class="mobile-component">
-    <ul>
-      <li><a href="#Top"><strong>Top👆</strong></a></li>&nbsp;·&nbsp;
-      <li><a href="#Education">📖</a></li>&nbsp;·&nbsp;
-      <li><a href="#Awards">🏆</a></li>&nbsp;·&nbsp;
-      <li><a href="#Publications">📄</a></li>&nbsp;·&nbsp;
-      <!-- <li><a href="#Blog">📝</a></li>&nbsp;·&nbsp; -->
-      <li><a href="#Research">💡</a></li>
-    </ul>
-  </div>
+  <main class="page">
 
-  <!-- Desktop Navigation -->
-  <div class="desktop-component">
-    <ul>
-      <li><a href="#Top"><strong>🫆About</strong></a></li>&nbsp;·&nbsp;
-      <li><a href="#Education"><strong>📖Education</strong></a></li>&nbsp;·&nbsp;
-      <li><a href="#Awards"><strong>🏆Awards</strong></a></li>&nbsp;·&nbsp;
-      <li><a href="#Publications"><strong>📄Publications</strong></a></li>&nbsp;·&nbsp;
-      <!-- <li><a href="#Blog"><strong>📝Blog</strong></a></li>&nbsp;·&nbsp; -->
-      <li><a href="#Research"><strong>💡Research</strong></a></li>
-    </ul>
-  </div>
+    <!-- ============ PROFILE ============ -->
+    <section class="profile">
+      <img src="assets/images/profile/zzz.jpg" alt="Zhizheng Zhao" class="profile-img">
+      <div class="profile-text">
+        <h1>Zhizheng Zhao <span class="zh">赵志政</span></h1>
+        <p>
+          I am a final-year undergraduate student at the
+          <a href="https://english.pku.edu.cn/" target="_blank">School of Physics, Peking University</a>.
+          My research interests broadly span machine learning, with a current focus on
+          multimodal generation and reasoning, reinforcement learning, and AI for science.
+        </p>
+        <p class="contact">
+          <a href="mailto:zhizhengzhao@outlook.com">Email</a> &middot;
+          <a href="assets/images/profile/CV.pdf" target="_blank">CV</a> &middot;
+          <a href="https://github.com/zhizhengzhao" target="_blank">GitHub</a> &middot;
+          <a href="assets/images/social/wechat.JPG" target="_blank">WeChat</a>
+        </p>
+      </div>
+    </section>
 
-  <!-- Smooth scroll functionality -->
-  <script>
-    var navbarHeightMobile = document.querySelector('.mobile-component ul').offsetHeight;
-    var navbarHeightDesktop = document.querySelector('.desktop-component ul').offsetHeight;
+    <!-- ============ NEWS ============ -->
+    <section>
+      <h2>News</h2>
+      <ul class="news">
+        <li>
+          <span class="date">May 2026</span>
+          <span>Our paper <em>CoF-T2I</em> is accepted to <strong>ICML 2026</strong>.</span>
+        </li>
+        <li>
+          <span class="date">Sep 2025</span>
+          <span>Received the <em>Alishan Scholarship</em> and <em>Outstanding Research Award</em> at PKU.</span>
+        </li>
+        <li>
+          <span class="date">Feb 2025</span>
+          <span>Our paper on step-by-step verification and reinforcement for image generation is accepted to
+            <strong>CVPR 2025</strong>.</span>
+        </li>
+      </ul>
+    </section>
 
-    document.querySelectorAll('.mobile-component ul li a, .desktop-component ul li a, .a').forEach(function (anchor) {
-      anchor.addEventListener('click', function (event) {
-        event.preventDefault();
+    <!-- ============ PUBLICATIONS ============ -->
+    <section>
+      <h2>Publications</h2>
 
-        var targetId = this.getAttribute('href');
-        var targetElement = document.querySelector(targetId);
-        var targetOffsetTop = targetElement.offsetTop;
+      <!-- Paper 2: CoF-T2I -->
+      <div class="paper">
+        <a href="https://icml.cc/virtual/2026/poster/60712" target="_blank" class="paper-title">
+          CoF-T2I: Video Models as Pure Visual Reasoners for Text-to-Image Generation
+        </a>
+        <div class="paper-authors">
+          Chengzhuo Tong*, Mingkun Chang*, Shenglong Zhang, Yuran Wang, Cheng Liang,
+          <strong>Zhizheng Zhao</strong>, Ruichuan An, Bohan Zeng, Yang Shi, Yifan Dai,
+          Ziming Zhao, Guanbin Li, Pengfei Wan, Yuanxing Zhang, Wentao Zhang
+          <span class="author-note">(* Equal contribution)</span>
+        </div>
+        <div class="paper-venue">
+          <span class="venue">ICML 2026</span>
+          <a href="https://icml.cc/virtual/2026/poster/60712" target="_blank">page</a> /
+          <a href="https://arxiv.org/abs/2601.10061" target="_blank">arXiv</a> /
+          <a href="https://cof-t2i.github.io/" target="_blank">project</a> /
+          <a href="https://github.com/VisionChengzhuo/CoF-T2I" target="_blank">code</a>
+        </div>
+      </div>
 
-        var navbarHeight = (window.innerWidth < 768) ? navbarHeightMobile : navbarHeightDesktop;
-        window.scrollTo({
-          top: targetOffsetTop - navbarHeight,
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-
-  <!-- Main Content Container -->
-  <table class="main-container">
-    <tbody>
-      <tr>
-        <td>
-          <!-- ============ ABOUT SECTION ============ -->
-          <section id="Top"></section>
-          <div class="bio">
-            <div class="face-name">
-              <img src="assets/images/profile/zzz.jpg" alt="profile photo" class="profile-img" width="192" height="192">
-              <div class="name-info">
-                赵志政<br>
-                Zhizheng Zhao
-              </div>
-            </div>
-            <br>
-            <p>
-              Hi, I'm Zhizheng Zhao, an undergraduate student at the School of Physics, Peking University.
-            </p>
-            <p>
-              Access more info / Contact me through the following links:
-            </p>
-            <div class="links">
-              <a href="assets/images/profile/CV.pdf" target="_blank">CV</a> &nbsp;·&nbsp;
-              <a href="assets/images/profile/Transcript.pdf" target="_blank">Transcript</a> &nbsp;·&nbsp;
-              <a href="mailto:zhizhengzhao@outlook.com">Email</a> &nbsp;·&nbsp;
-              <a href="assets/images/social/wechat.JPG" target="_blank">WeChat</a>
-            </div>
-          </div>
-
-          <hr>
-
-          <!-- ============ EDUCATION SECTION ============ -->
-          <section id="Education"></section>
-          <h2><strong>Education 📖</strong></h2>
-
-          <div class="experience-container no-hover">
-            <div class="image">
-              <img src="assets/images/logos/pku.png" alt="Peking University Logo">
-            </div>
-            <div class="text">
-              <span class="papertitle">Peking University</span><br>
-              <p class="metadata">Undergraduate Student, 2022 - Present | School of Physics</p>
-            </div>
-          </div>
-
-          <div class="experience-container no-hover">
-            <div class="image">
-              <img src="assets/images/logos/sz.png" alt="Shenzhen Quantum Academy Logo">
-            </div>
-            <div class="text">
-              <a href="https://sziqa.ac.cn/" class="papertitle-link" target="_blank">
-                <span class="papertitle">Shenzhen International Quantum Academy</span>
-              </a><br>
-              <p class="metadata">Visiting Student, 01/2025 - 02/2025</p>
-            </div>
-          </div>
-
-          <hr>
-
-          <!-- ============ AWARDS SECTION ============ -->
-          <section id="Awards"></section>
-          <h2><strong>Awards and Honors 🏆</strong></h2>
-
-          <div class="award-item-container no-hover">
-            <div class="text">
-              <span class="papertitle">Alishan Scholarship</span><br>
-              <p class="metadata">09/2025 | Peking University School of Physics, 8/261
-                recipients</p>
-            </div>
-          </div>
-
-          <div class="award-item-container no-hover">
-            <div class="text">
-              <span class="papertitle">Outstanding Research Award</span><br>
-              <p class="metadata">09/2025 | Peking University School of Physics, 30/261
-                recipients</p>
-            </div>
-          </div>
-
-          <div class="award-item-container no-hover">
-            <div class="text">
-              <span class="papertitle">National Endeavor Scholarship</span><br>
-              <p class="metadata">09/2025 | Peking University School of Physics</p>
-            </div>
-          </div>
-
-          <hr>
-
-          <!-- ============ PUBLICATIONS SECTION ============ -->
-          <section id="Publications"></section>
-          <h2><strong>Publications 📄</strong></h2>
-
-          <!-- Paper 1: PARM -->
+      <!-- Paper 1: PARM -->
+      <div class="paper">
+        <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Zhang_Lets_Verify_and_Reinforce_Image_Generation_Step_by_Step_CVPR_2025_paper.pdf"
+          target="_blank" class="paper-title">
+          Let's Verify and Reinforce Image Generation Step by Step
+        </a>
+        <div class="paper-authors">
+          Renrui Zhang*, Chengzhuo Tong*, <strong>Zhizheng Zhao*</strong>, Ziyu Guo*, Huaidong Zhang,
+          Manyuan Zhang, Peng Gao, Hongsheng Li
+          <span class="author-note">(* Equal contribution)</span>
+        </div>
+        <div class="paper-venue">
+          <span class="venue">CVPR 2025</span>
           <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Zhang_Lets_Verify_and_Reinforce_Image_Generation_Step_by_Step_CVPR_2025_paper.pdf"
-            target="_blank" class="paper-link">
-            <div class="paper-container">
-              <div class="text">
-                <span class="papertitle">Let's Verify and Reinforce Image Generation Step by Step</span><br>
-                <p>
-                  Renrui Zhang*,
-                  Chengzhuo Tong*,
-                  <u><strong>Zhizheng Zhao</strong></u>*,
-                  Ziyu Guo*,
-                  Huaidong Zhang,
-                  Manyuan Zhang,
-                  Peng Gao,
-                  Hongsheng Li
-                  <br>
-                  <em style="color: rgb(160, 160, 160); font-size: smaller;">* Co-first authorship</em>
-                </p>
-                <div class="CVPR">
-                  <strong>CVPR 2025</strong>
-                </div>
-              </div>
-            </div>
-          </a>
+            target="_blank">PDF</a>
+        </div>
+      </div>
+    </section>
 
-          <hr>
+    <!-- ============ RESEARCH EXPERIENCE ============ -->
+    <section>
+      <h2>Research Experience</h2>
 
-          <!-- ============ BLOG SECTION ============ 
-          <section id="Blog"></section>
-          <h2><strong>Blog 📝</strong></h2>
+      <div class="entry">
+        <div class="entry-title">Reward and Policy Distribution Optimization in GRPO</div>
+        <div class="entry-meta">
+          University of Illinois Urbana-Champaign &middot;
+          Advisor: Prof. Minjia Zhang &middot;
+          Mar 2025 – Jul 2025
+        </div>
+      </div>
 
-          <div class="experience-container">
-            <div class="text">
-              <span class="papertitle">Research Notes & Blog Articles</span><br>
-              <p>
-                I share my learning notes, research insights, and technical articles covering topics in physics,
-                artificial intelligence, and computer science.
-              </p>
-              <p>
-                <strong class="buttom">
-                  <a href="assets/documents/cv.pdf" target="_blank">[My Blog & Notes]</a>
-                </strong>
-              </p>
-            </div>
-          </div>
+      <div class="entry">
+        <div class="entry-title">Chain-of-Thought Reasoning for Advanced Image Generation</div>
+        <div class="entry-meta">
+          CUHK MMLab &amp; ByteDance &middot;
+          Advisor: Dr. Renrui Zhang &middot;
+          Sep 2024 – Jan 2025
+        </div>
+      </div>
 
-          <hr>
-          -->
+      <div class="entry">
+        <div class="entry-title">Resistive Plate Counter Development</div>
+        <div class="entry-meta">
+          Peking University &middot;
+          Advisor: Prof. Qite Li &middot;
+          Mar 2024 – Jul 2024
+        </div>
+      </div>
+    </section>
 
-          <!-- ============ RESEARCH EXPERIENCE SECTION ============ -->
-          <section id="Research"></section>
-          <h2><strong>Research Experience 💡</strong></h2>
+    <!-- ============ EDUCATION ============ -->
+    <section>
+      <h2>Education</h2>
 
-          <div class="experience-container no-hover">
-            <div class="image">
-              <img src="assets/images/logos/pku.png" alt="">
-            </div>
-            <div class="text">
-              <span class="papertitle">Resistive Plate Counter Development and Data Analysis</span><br>
-              <p class="metadata">03/2024 – 07/2024 | with Prof. Qite Li</p>
-              <!-- <p>
-                <strong class="buttom">
-                  <a href="assets/images/logos/pku.png" target="_blank">[Results]</a>
-                </strong>
-              </p> -->
-            </div>
-          </div>
+      <div class="entry">
+        <div class="entry-title">Peking University</div>
+        <div class="entry-meta">
+          B.S. in Physics &middot;
+          Sep 2022 – Expected Jul 2026
+        </div>
+      </div>
 
-          <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Zhang_Lets_Verify_and_Reinforce_Image_Generation_Step_by_Step_CVPR_2025_paper.pdf"
-            target="_blank" class="experience-link">
-            <div class="experience-container">
-              <div class="image">
-                <img src="assets/images/logos/cuhk.webp" alt="">
-              </div>
-              <div class="text">
-                <span class="papertitle">Chain-of-Thought Reasoning for Advanced Image Generation</span><br>
-                <p class="metadata">09/2024 – 01/2025 | with Dr. Renrui Zhang</p>
-              </div>
-            </div>
-          </a>
+      <div class="entry">
+        <div class="entry-title">Shenzhen International Quantum Academy</div>
+        <div class="entry-meta">
+          Visiting Student &middot;
+          Jan 2025 – Feb 2025
+        </div>
+      </div>
+    </section>
 
-          <a href="assets/documents_and_research/Summary of Research at UIUC.pdf" target="_blank"
-            class="experience-link">
-            <div class="experience-container">
-              <div class="image">
-                <img src="assets/images/logos/UIUC-Symbol.png" alt="">
-              </div>
-              <div class="text">
-                <span class="papertitle">Reward and Policy Distribution Optimization in GRPO</span><br>
-                <p class="metadata">03/2025 – 07/2025 | with Prof. Minjia Zhang</p>
-              </div>
-            </div>
-          </a>
+    <!-- ============ AWARDS ============ -->
+    <section>
+      <h2>Awards</h2>
+      <ul class="awards">
+        <li>
+          <strong>Alishan Scholarship</strong>
+          <span class="award-meta">&middot; Top 3% (8/261), PKU School of Physics &middot; Sep 2025</span>
+        </li>
+        <li>
+          <strong>Outstanding Research Award</strong>
+          <span class="award-meta">&middot; Top 12% (30/261), PKU School of Physics &middot; Sep 2025</span>
+        </li>
+      </ul>
+    </section>
 
-          <a href="assets/documents_and_research/Summary of Research at CUHK.pdf" target="_blank"
-            class="experience-link">
-            <div class="experience-container">
-              <div class="image">
-                <img src="assets/images/logos/cuhk.webp" alt="">
-              </div>
-              <div class="text">
-                <span class="papertitle">Improving Crystal Structure Prediction via Niggli Reduction</span><br>
-                <p class="metadata">07/2025 – 09/2025 | with Prof. Shengchao Liu</p>
-              </div>
-            </div>
-          </a>
-
-          <!-- <div class="experience-container no-hover">
-            <div class="image">
-              <img src="assets/images/logos/cuhk.webp" alt="">
-            </div>
-            <div class="text">
-              <span class="papertitle">Improving Crystal Structure Prediction via Niggli Reduction</span><br>
-              <p class="metadata">07/2025 – 09/2025 | with Prof. Shengchao Liu</p>
-            </div>
-          </div> -->
-
-          <hr>
-
-          <!-- ============ FOOTER ============ -->
-          <table class="footer-container">
-            <tbody>
-              <tr>
-                <td>
-                  <p style="text-align: center; font-size: large;">
-                    <em>Stay inspired and keep exploring!</em>
-                    <br><br>
-                    <span style="font-size: medium; color: rgb(143, 143, 143);">© 2025 Zhizheng Zhao</span>
-                  </p>
-                  <div class="logo-container">
-                    <img src="assets/images/logos/pku.png" alt="PKU Logo">
-                    <img src="assets/images/logos/sz.png" alt="Quantum Academy Logo">
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    <!-- ============ FOOTER ============ -->
+    <footer>
+      <p>&copy; 2026 Zhizheng Zhao &middot; Last updated May 2026</p>
+    </footer>
+  </main>
 </body>
 
 </html>
