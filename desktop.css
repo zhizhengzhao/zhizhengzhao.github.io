@@ -273,23 +273,47 @@ h2 {
 }
 
 /* ============================================
-   ENTRIES (Research, Education)
+   ENTRIES (Education, Visits, Research Experience)
+   Unified layout: position (role/degree) + date,
+   then institution, then optional description.
    ============================================ */
 
 .entry {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+}
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
 }
 
 .entry-title {
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 2px;
   font-size: 15.5px;
 }
 
-.entry-meta {
+.entry-date {
+  color: var(--text);
+  font-weight: 700;
   font-size: 14.5px;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.entry-org {
+  font-size: 15px;
+  color: var(--text);
+  margin-top: 1px;
+}
+
+.entry-meta {
+  font-size: 14px;
   color: var(--text-muted);
+  font-style: italic;
+  margin-top: 2px;
 }
 
 /* ============================================

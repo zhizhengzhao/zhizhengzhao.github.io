@@ -207,23 +207,46 @@ h2 {
 }
 
 /* ============================================
-   ENTRIES
+   ENTRIES (Education, Visits, Research Experience)
    ============================================ */
 
 .entry {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+}
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .entry-title {
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 2px;
   font-size: 14.5px;
 }
 
+.entry-date {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.entry-org {
+  font-size: 14px;
+  color: var(--text);
+  margin-top: 1px;
+}
+
 .entry-meta {
-  font-size: 13.5px;
+  font-size: 13px;
   color: var(--text-muted);
+  font-style: italic;
+  margin-top: 2px;
 }
 
 /* ============================================
