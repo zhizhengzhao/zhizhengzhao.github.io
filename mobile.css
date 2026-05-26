@@ -122,6 +122,13 @@ h2 {
   color: var(--text-muted);
 }
 
+.contact a {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+}
+
 /* ============================================
    NEWS
    ============================================ */
